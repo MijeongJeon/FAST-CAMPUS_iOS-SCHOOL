@@ -1,6 +1,6 @@
-# FAST-CAMPUS_iOS
+## FAST-CAMPUS_iOS
 
-## 목표
+### 목표
 
 - 컴퓨터 역사 및 기본 구조 이론지식 이해
 - 컴퓨터 및 프로그래밍 관련 실무용어 습득
@@ -8,12 +8,12 @@
 - iOS Application 개발(Team project)
 
 
-## 수강기간 
+### 수강기간 
 
 - 2016.4.25. ~ 2016.07.15.
 
 
- ## Curriculum
+### Curriculum
  - Unit 1. Computernal Thinking (7 days)
  - Unit 2. Objective-C (8 days)
  - Unit 3. iOS Programming iOS Frame Work (10 days)
@@ -21,7 +21,7 @@
  - Unit 5. Readl Team Project(10 days)
 
 
-## Daily Schedule
+### Daily Schedule
  -  9:00 ~ 10:00 : Daily Scrum + Activities
  - 10:00 ~ 12:00 : Lecture + Practice
  - 12:00 ~ 13:00 : Lunch
