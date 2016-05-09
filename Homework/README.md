@@ -49,5 +49,6 @@
 - D-DAY 기능 함수 만들기(checkDDay 함수 실행시 기념일 부터 지금까지의 날짜 체크)
 
 ##### Day11.
--
-
+- Format Specifier 추가 조사 (NSlnteger, CGFloat, Nsstring ---)
+- 절차지향과 객체지향의 차이점
+- 클래스 vs 객치 vs 인스턴스 차이점 조사 
