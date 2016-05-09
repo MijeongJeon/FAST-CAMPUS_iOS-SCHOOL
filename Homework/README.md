@@ -51,4 +51,4 @@
 ##### Day11.
 - Format Specifier 추가 조사 (NSlnteger, CGFloat, Nsstring ---)
 - 절차지향과 객체지향의 차이점
-- 클래스 vs 객치 vs 인스턴스 차이점 조사하기
+- 클래스 vs 객체 vs 인스턴스 차이점
