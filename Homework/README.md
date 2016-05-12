@@ -52,3 +52,14 @@
 - Objective-C Format Specifier 조사
 - 절차지향과 객체지향의 차이점
 - 클래스 vs 객체 vs 인스턴스 차이점
+
+##### Day12.
+- self keyword, super keyword 조사
+- override 조사 
+- 캡슐화 조사
+
+##### Day14.
+- 마지막 자리수에서 반올림하는 클래스 만들기
+- 년도와 일자 받아서 월, 일 구하는 클래스 만들기
+- 숫자 받아서 뒷자리부터 거꾸로 반환하는 클래서 만들기
+

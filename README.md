@@ -48,5 +48,7 @@
 
 - Day11. Objective-C, 변수, 클래스, 객체
 - Day12. 클래스/메소드 선언방식, 상속
+
 - Day13. Review + Objective-C 용어 정리
-- Day14. Review + Objective-C 용어 정리
+- Day14. Review + Objective-C 용어 정리 + 클래스 실습
+
