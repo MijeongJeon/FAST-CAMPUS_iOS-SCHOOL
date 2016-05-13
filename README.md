@@ -9,9 +9,11 @@
 - iOS Application 개발(Team project)
 
 
+
 #### Term Dates
 
 - 2016.4.25. ~ 2016.07.15.
+
 
 
 #### Curriculum
@@ -23,6 +25,7 @@
  - Unit 5. Real Team Project(10 days)
 
 
+
 #### Daily Schedule
 
  - 09:00 ~ 10:00 : Daily Scrum + Activities
@@ -30,6 +33,7 @@
  - 12:00 ~ 13:00 : Lunch
  - 13:00 ~ 18:00 : Lecture + Practice
  - 18:00 ~       : Dinner + Self Study + Group Study
+
 
 
 #### Detail Contents
@@ -45,10 +49,8 @@
 - Day08. Xcode 사용법, 변수, 함수
 - Day09. C언어_조건문, 반복문
 - Day10. C언어_함수를 이용한 실습
-
 - Day11. Objective-C, 변수, 클래스, 객체
 - Day12. 클래스/메소드 선언방식, 상속
-
 - Day13. Review + Objective-C 용어 정리
 - Day14. Review + Objective-C 용어 정리 + 클래스 실습
 
