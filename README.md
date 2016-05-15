@@ -45,4 +45,4 @@
 - Day12. 클래스/메소드 선언방식, 상속
 - Day13. Review + Objective-C 용어 정리
 - Day14. Review + Objective-C 용어 정리 + 클래스 실습
-
+- Day15. 실습_자판기 만들기 
