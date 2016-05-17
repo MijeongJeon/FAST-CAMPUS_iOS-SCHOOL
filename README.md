@@ -46,3 +46,6 @@
 - Day13. Review + Objective-C 용어 정리
 - Day14. Review + Objective-C 용어 정리 + 클래스 실습
 - Day15. 실습_자판기 만들기 
+
+- Day16. Cocoa Touch Framework_Storyboard 활용
+
