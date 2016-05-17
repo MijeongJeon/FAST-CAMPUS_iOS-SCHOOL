@@ -48,4 +48,6 @@
 - Day15. 실습_자판기 만들기 
 
 - Day16. Cocoa Touch Framework_Storyboard 활용
+- Day17. NSObject Life Cycle, Auto Layout 활용
+
 
