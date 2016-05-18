@@ -50,4 +50,6 @@
 - Day16. Cocoa Touch Framework_Storyboard 활용
 - Day17. NSObject Life Cycle, Auto Layout 활용
 
+- Day18. 자료구조/알고리즘 수업1_알고리즘 실습
+
 
