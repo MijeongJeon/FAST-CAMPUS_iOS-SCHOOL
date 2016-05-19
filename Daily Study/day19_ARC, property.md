@@ -4,7 +4,7 @@
 #### 이론
 - Objective-C: constnat, enum, bit flag, option, macro
 - ARC(Automatic Reference Counting): 개념과 MRC와의 비교 [링크: homework_day17](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Homework/day17_ARC.pdf)
-- Property: property의 역할과 property option 종 류[링크: Groupstudy_03](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Group%20Study/GStudy_03_Property.pdf)
+- Property: property의 역할과 property option 종 류 [링크: Groupstudy_03](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Group%20Study/GStudy_03_Property.pdf)
 
 
 #### 실습
