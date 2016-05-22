@@ -10,20 +10,20 @@
 
 @interface ToolBox : NSObject
 
--(void)number1:(NSInteger)numA;
--(void)number2:(NSInteger)numA;
+- (void)number1:(NSInteger)numA;
+- (void)number2:(NSInteger)numA;
 
--(NSInteger)sumNumbers;
--(NSInteger)subNumbers;
--(NSInteger)mulNumbers;
--(CGFloat)didNumbers;
+- (NSInteger)sumNumbers;
+- (NSInteger)subNumbers;
+- (NSInteger)mulNumbers;
+- (CGFloat)didNumbers;
 
--(CGFloat)inchToCm;
--(CGFloat)cmToInch;
--(CGFloat)m2ToPyung;
--(CGFloat)pyungToM2;
--(CGFloat)fToC;
--(CGFloat)ctoF;
--(CGFloat)dataChange;
+- (CGFloat)inchToCm;
+- (CGFloat)cmToInch;
+- (CGFloat)m2ToPyung;
+- (CGFloat)pyungToM2;
+- (CGFloat)fToC;
+- (CGFloat)ctoF;
+- (CGFloat)dataChange;
 
 @end
