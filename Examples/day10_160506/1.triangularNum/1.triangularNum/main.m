@@ -11,7 +11,7 @@
 
 // 1. 스왑함수 만들기
 
-void swapFunction(int num1, int num2){
+void swapFunction(int num1, int num2) {
     int num3 =0;
     
     num3 = num1;
@@ -24,7 +24,7 @@ void swapFunction(int num1, int num2){
 
 // 2. 삼각수 구하기1
 
-int triangularNum(int num){
+int triangularNum(int num) {
     int sum = 0;
     for (int i = 1; i<=num; i++) {
         sum += i;
@@ -35,10 +35,9 @@ int triangularNum(int num){
 
 // 3. 삼각수 만들기2
 
-void triangularRangeNum(int num1, int num2){
+void triangularRangeNum(int num1, int num2) {
     for (int i = 1; i<=num2; i++) {
         int num3 = 0;
-        
         
         if (i/5!=0 && i%5==0) {
             num3 = i;
@@ -51,7 +50,7 @@ void triangularRangeNum(int num1, int num2){
 
 // 4. 각 자리수 더하기
 
-void addAllNum(int num){
+void addAllNum(int num) {
     int i = 1;
     int lastNum = 0;
     int sum = 0;
