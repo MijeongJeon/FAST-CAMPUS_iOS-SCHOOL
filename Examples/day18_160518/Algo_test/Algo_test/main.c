@@ -9,7 +9,6 @@
 
 int main(int argc, const char * argv[]) {
     
-
     int n;
     
     scanf("%d", &n);
@@ -18,15 +17,15 @@ int main(int argc, const char * argv[]) {
         for (int j=i; j<=n-1; j++) {
             printf(" ");
         }
-            printf("*");
+        printf("*");
         if (i!=1) {
             for (int k = 1; k < i; k++) {
                 printf(" ");
                 printf("*");
             }
-
+            
         }
-                printf("\n");
+        printf("\n");
         
     }
     return 0;
