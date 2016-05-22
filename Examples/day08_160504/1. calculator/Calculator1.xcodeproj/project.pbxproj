@@ -13,8 +13,6 @@
 		E976BA631CD9AEC40009345A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E976BA611CD9AEC40009345A /* Main.storyboard */; };
 		E976BA651CD9AEC40009345A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E976BA641CD9AEC40009345A /* Assets.xcassets */; };
 		E976BA681CD9AEC40009345A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E976BA661CD9AEC40009345A /* LaunchScreen.storyboard */; };
-		E976BA721CD9B7050009345A /* Button-White.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E976BA711CD9B7050009345A /* Button-White.jpg */; };
-		E976BA741CD9B8370009345A /* Button-White2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E976BA731CD9B8370009345A /* Button-White2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +26,6 @@
 		E976BA641CD9AEC40009345A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E976BA671CD9AEC40009345A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E976BA691CD9AEC40009345A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E976BA711CD9B7050009345A /* Button-White.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Button-White.jpg"; sourceTree = "<group>"; };
-		E976BA731CD9B8370009345A /* Button-White2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Button-White2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +64,6 @@
 				E976BA5F1CD9AEC40009345A /* ViewController.m */,
 				E976BA611CD9AEC40009345A /* Main.storyboard */,
 				E976BA641CD9AEC40009345A /* Assets.xcassets */,
-				E976BA711CD9B7050009345A /* Button-White.jpg */,
-				E976BA731CD9B8370009345A /* Button-White2.jpg */,
 				E976BA661CD9AEC40009345A /* LaunchScreen.storyboard */,
 				E976BA691CD9AEC40009345A /* Info.plist */,
 				E976BA581CD9AEC40009345A /* Supporting Files */,
@@ -142,9 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E976BA741CD9B8370009345A /* Button-White2.jpg in Resources */,
 				E976BA681CD9AEC40009345A /* LaunchScreen.storyboard in Resources */,
-				E976BA721CD9B7050009345A /* Button-White.jpg in Resources */,
 				E976BA651CD9AEC40009345A /* Assets.xcassets in Resources */,
 				E976BA631CD9AEC40009345A /* Main.storyboard in Resources */,
 			);
@@ -306,6 +298,7 @@
 				E976BA6E1CD9AEC40009345A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

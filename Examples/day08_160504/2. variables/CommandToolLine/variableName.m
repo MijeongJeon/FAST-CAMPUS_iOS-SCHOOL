@@ -23,8 +23,8 @@ int priceCoke;
 int priceCoffee;
 int priceJuice;
 
-int countDrink;
-const int maxCountDrink;
+int numberOfDrink;
+const int maxNumberOfDrink;
 
 int changeMoney;
 
