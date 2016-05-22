@@ -29,7 +29,7 @@ int getLastDayOfMonth(int month, int year){
     int lastDayOfMonth = 0;
     int countDayOfMonth = 0;
     
-    for (int i = 1 ; i < month; i++) {
+    for (int i = 1; i < month; i++) {
         
         switch (i) {
             case 1:
@@ -65,10 +65,10 @@ int calculationDday(){
     int daysUntilAfter = 0;
     int daysUntilBefore = 0;
     
-    if (todayDate >= eventDate){
+    if (todayDate >= eventDate) {
         afterDate = todayDate;
         beforeDate = eventDate;
-    }else{
+    } else {
         afterDate = eventDate;
         beforeDate = todayDate;
     }
@@ -76,7 +76,7 @@ int calculationDday(){
     diffYearDay = (afterDate/10000 - beforeDate/10000) * 365;
     
     for (int i = beforeDate; i < afterDate/10000; i++) {
-        if (isLeapYear(i)){
+        if (isLeapYear(i)) {
             diffYearDay ++;
         } // 년 차이 날짜
     }
@@ -88,22 +88,22 @@ int calculationDday(){
 }
 
 // 윤년 검사 함수
-bool isLeapYear(int day){
+bool isLeapYear(int day) {
     
     int year = day/10000;
     
-    if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
 // 프린팅 함수
-void printDDay(){
-    if (todayDate>=eventDate){
+void printDDay() {
+    if (todayDate>=eventDate) {
         printf("D+%d\n",calculationDday()); // 날짜가 지났을 때
-    }else{
+    } else {
         printf("D-%d\n",calculationDday()); // 날짜가 남았을 때
     }
 }
