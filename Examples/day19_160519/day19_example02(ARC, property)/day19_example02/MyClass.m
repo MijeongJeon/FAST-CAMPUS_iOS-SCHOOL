@@ -23,8 +23,10 @@
 //- (NSInteger)name {
 //    return _name;
 //}
+
 //
 //- (void)setName:(NSString *)name {
 //    name = _name;
 //}
+
 @end
