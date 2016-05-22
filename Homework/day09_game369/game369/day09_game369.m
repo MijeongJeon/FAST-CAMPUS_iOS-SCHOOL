@@ -13,18 +13,18 @@ void game369(){
     int a = 1;
     int b = 0;
     
-    for (int j=1;j<10000; j++) {
+    for (int j=1; j<10000; j++) {
         int i=1;
         
-        while(i<100){
+        while (i<100) {
             
-            a=j/i%10;
+            a = j/i%10;
             
-            if (a==3 ||a==6||a==9) {
+            if (a%3 == 0 && a != 0) {
                 b=1;
                 break;
                 
-            }else{
+            } else {
                 i=i*10;
                 b=0;
             }
