@@ -49,6 +49,7 @@
 
 - Day16. Cocoa Touch Framework_Storyboard 활용
 - Day17. NSObject Life Cycle, Auto Layout 활용
-- Day18. 자료구조/알고리즘 수업1_알고리즘 실습
+- Day18. 자료구조/알고리즘 수업1_알고리즘 실습, stack 구조 만들어보기
 - [Day19. 열거, 옵션, ARC, Property](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day19_ARC%2C%20property.md)
 - Day20. Github desktop, Autolayout 실습, property
+
