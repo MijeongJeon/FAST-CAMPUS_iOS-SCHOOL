@@ -10,17 +10,17 @@
 
 //***************** 구구단 구하기 **************//
 
-void gooGooDan(NSArray *danSoo){
+void gooGooDan(NSArray *danSoo) {
     for (NSNumber *dan in danSoo) {
-        for(int i=1; i<10; i++){
-        NSLog(@"%@ * %d = %ld\n",dan,i,i*dan.integerValue);
-    }
+        for (int i=1; i<10; i++) {
+            NSLog(@"%@ * %d = %ld\n",dan,i,i*dan.integerValue);
+        }
         NSLog(@"===========\n");
     }
 }
 
 int main(int argc, const char * argv[]) {
- 
+    
     NSArray *danSoo = @[@2, @3, @7];
     gooGooDan(danSoo);
     
