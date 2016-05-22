@@ -10,9 +10,10 @@
 
 @interface CardClass : NSObject
 
+@property (nonatomic, strong)NSString *type;
+@property (nonatomic, strong)NSString *color;
+@property (nonatomic, strong)NSString *number;
+
 - (instancetype)initWithCardType:(NSString *)Type Number:(NSString *)Number Color:(NSString *)Color;
-- (NSString *)type;
-- (NSString *)number;
-- (NSString *)color;
 
 @end
