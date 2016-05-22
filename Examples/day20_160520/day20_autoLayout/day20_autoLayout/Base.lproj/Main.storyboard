@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPq-bK-Hjz" userLabel="View3">
+                                <rect key="frame" x="0.0" y="20" width="300" height="580"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hup-Hq-3sU" userLabel="View4">
+                                <rect key="frame" x="300" y="20" width="300" height="580"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZj-d7-CeT" userLabel="View1">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.83489547500000005" blue="0.25731680559999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-Qv-V3D" userLabel="View2">
+                                <rect key="frame" x="150" y="500" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kUP-Al-Zmc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TPB-Qv-V3D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="07W-V6-Tbv"/>
+                            <constraint firstItem="hup-Hq-3sU" firstAttribute="top" secondItem="UPq-bK-Hjz" secondAttribute="top" id="A6A-x1-Y5d"/>
+                            <constraint firstItem="TPB-Qv-V3D" firstAttribute="top" secondItem="UPq-bK-Hjz" secondAttribute="bottom" id="Cdu-Nw-H1Z"/>
+                            <constraint firstItem="AZj-d7-CeT" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="DWm-py-idn"/>
+                            <constraint firstItem="AZj-d7-CeT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hkh-Rc-oyB"/>
+                            <constraint firstItem="TPB-Qv-V3D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IW8-si-6po"/>
+                            <constraint firstItem="UPq-bK-Hjz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="N3E-uI-Df0"/>
+                            <constraint firstItem="hup-Hq-3sU" firstAttribute="width" secondItem="UPq-bK-Hjz" secondAttribute="width" id="P66-vw-MXi"/>
+                            <constraint firstItem="hup-Hq-3sU" firstAttribute="height" secondItem="UPq-bK-Hjz" secondAttribute="height" id="PPt-2h-409"/>
+                            <constraint firstItem="TPB-Qv-V3D" firstAttribute="width" secondItem="AZj-d7-CeT" secondAttribute="width" id="VxI-2B-YBc"/>
+                            <constraint firstItem="TPB-Qv-V3D" firstAttribute="centerY" secondItem="AZj-d7-CeT" secondAttribute="centerY" id="Ywf-q2-lq0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TPB-Qv-V3D" secondAttribute="bottom" id="ZaW-Au-Pfd"/>
+                            <constraint firstItem="AZj-d7-CeT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d44-vK-U0C"/>
+                            <constraint firstItem="AZj-d7-CeT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ect-Tr-KzY"/>
+                            <constraint firstItem="TPB-Qv-V3D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h3k-B3-m37"/>
+                            <constraint firstItem="UPq-bK-Hjz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hek-1w-Qhv"/>
+                            <constraint firstItem="UPq-bK-Hjz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="jUS-vt-Kp5"/>
+                            <constraint firstItem="TPB-Qv-V3D" firstAttribute="top" secondItem="UPq-bK-Hjz" secondAttribute="bottom" id="rQ1-TG-NoJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UPq-bK-Hjz" secondAttribute="bottom" id="sDW-9p-iDg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hup-Hq-3sU" secondAttribute="trailing" constant="-20" id="zh2-AZ-0OU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="07W-V6-Tbv"/>
+                                <exclude reference="Cdu-Nw-H1Z"/>
+                                <exclude reference="IW8-si-6po"/>
+                                <exclude reference="Ywf-q2-lq0"/>
+                                <exclude reference="rQ1-TG-NoJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
