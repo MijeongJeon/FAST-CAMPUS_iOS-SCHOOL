@@ -36,7 +36,7 @@
 //     [super dealloc];
 }
 
-- (void)testInstanceMethod{
+- (void)testInstanceMethod {
     NSLog(@"testInstanceMethod called");
 }
 
