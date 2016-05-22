@@ -17,23 +17,19 @@ float number = 0;
 
 // 값 입력
 
-void setSquareMeter(float new)
-{
+void setSquareMeter(float new) {
     squareMeter = new;
 }
 
-void setR(float new)
-{
+void setR(float new) {
     r = new;
 }
 
-void setKorMoney(int new)
-{
+void setKorMoney(int new) {
     korMoney = new;
 }
 
-void setNumber(float new)
-{
+void setNumber(float new) {
     number = new;
 }
 
@@ -42,26 +38,22 @@ void setNumber(float new)
 
 // 1. 평수 구하기
 
-float changeSpace()
-{
+float changeSpace() {
     return squareMeter * 0.3025;
 }
 
 // 2. 원의 둘레 구하기
-float lengthCircle()
-{
+float lengthCircle() {
     return r * 2 * PI;
 }
 
 // 3.환율 변환기
-int changeMoney()
-{
+int changeMoney() {
     return korMoney / currency;
 }
 
 // 4. 소수점 3째 자리에서 반올림
-float roundUp(float number)
-{
+float roundUp(float number) {
     return (float)((int)((number + 0.005) * 100))/100;
     
 }

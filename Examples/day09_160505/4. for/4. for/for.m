@@ -11,16 +11,16 @@
 int result = 1;
 
 // 구구단 함수
-void googoodan(int dan){
-    for(int i=1; i<10; i++){
+void googoodan(int dan) {
+    for (int i=1; i<10; i++) {
         printf("%d * %d = %d\n", dan, i, dan*i);
     }
 }
 
 
 // Factorial
-void factorial(int num){
-    for(int i=1; i < num+1 ; i++){
+void factorial(int num) {
+    for (int i=1; i < num+1 ; i++) {
         result = result * i;
     }
     printf("factorial(%d) = %d\n", num, result);
