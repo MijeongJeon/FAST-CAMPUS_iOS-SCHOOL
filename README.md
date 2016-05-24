@@ -53,3 +53,11 @@
 - [Day19. 열거, 옵션, ARC, Property](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day19_ARC%2C%20property.md)
 - Day20. Github desktop, Autolayout 실습, property
 
+- Day21. 자료구조_스택, 덱, 큐 실습
+- Day22. UI Component1_UIView, UILabel, UIImageView 
+- Day23. 자료구조/알고리즘
+- Day24. UI Component2_UIControl, UIButton/ protocol, delegate
+- Day24. UI Component3_UIScrollView, UITextView
+
+
+
