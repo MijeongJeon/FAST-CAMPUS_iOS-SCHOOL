@@ -54,10 +54,9 @@
 - Day20. Github desktop, Autolayout 실습, property
 
 - Day21. 자료구조_스택, 덱, 큐 실습
-- Day22. UI Component1_UIView, UILabel, UIImageView 
-- Day23. 자료구조/알고리즘
+- [Day22. UI Component1_UIView, UILabel, UIImageView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day21_UIView%2C%20UILabel.md)
+- Day23. 알고리즘_다이나믹 프로그래밍
 - Day24. UI Component2_UIControl, UIButton/ protocol, delegate
-- Day24. UI Component3_UIScrollView, UITextView
 
 
 
