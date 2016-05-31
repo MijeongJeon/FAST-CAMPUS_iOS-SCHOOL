@@ -1,4 +1,4 @@
-FAST-CAMPUS_iOS :iphone:
+FAST-CAMPUS_iOS 
 ===================
 
 #### :dart: Learning Goal
