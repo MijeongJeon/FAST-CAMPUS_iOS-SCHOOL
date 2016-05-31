@@ -17,7 +17,7 @@ FAST-CAMPUS_iOS
 #### <i class="icon-road"></i>  Term Dates
 - 2016.4.25. ~ 2016.07.15.
 
-#### <i class="icon-clock"></i>  Daily Schedule
+#### :clock3:  Daily Schedule emoji:"clock3"
 - 09:00 ~ 10:00 : Daily Scrum + Activities
 - 10:00 ~ 12:00 : Lecture + Practice
 - 12:00 ~ 13:00 : Lunch
@@ -68,7 +68,7 @@ FAST-CAMPUS_iOS
 
 
 <br>
->   **Data Structure and Algorithm(자료구조/알고리즘) **
+>   **Data Structure and Algorithm(자료구조/알고리즘)**
 - Day18. 자료구조/알고리즘_알고리즘 실습, stack 구조 만들기
 - Day21. 자료구조/알고리즘_스택, 덱, 큐 실습
 - Day23. 자료구조/알고리즘_다이나믹 프로그래밍
