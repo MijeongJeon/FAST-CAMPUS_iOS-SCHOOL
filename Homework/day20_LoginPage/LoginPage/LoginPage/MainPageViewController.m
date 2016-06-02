@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [UIView animateWithDuration:20 delay:0.5 options:UIViewAnimationOptionTransitionFlipFromTop animations:^{
+        [_melong setFrame:CGRectMake(10, 0, self.view.frame.size.width/2, self.view.frame.size.height/2)];} completion:^(BOOL finished){[_melong setFrame:CGRectMake(10, self.view.frame.size.height, self.view.frame.size.width/30, self.view.frame.size.height/10)];
+        }];
+
 }
 
 - (void)didReceiveMemoryWarning {

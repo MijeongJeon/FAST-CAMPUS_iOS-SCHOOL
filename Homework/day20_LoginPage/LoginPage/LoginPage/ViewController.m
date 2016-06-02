@@ -15,6 +15,8 @@
 @property (nonatomic, weak) IBOutlet UIButton *buttonLogin;
 @property (nonatomic) UIView *reset;
 @property (nonatomic, weak) IBOutlet UIView *view1;
+@property (nonatomic, weak) IBOutlet UITextField *idField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordField;
 
 @end
 
@@ -23,20 +25,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [_buttonLogin addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
+//    [_buttonLogin addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)action:(UIButton *)sender {
-    // user 이미지의 초기 위치를 저장하는 값 생성 및 저장
-    _reset = [[UIView alloc] init];
-    _reset.alpha = 0.0;
-    [_view1 addSubview:_reset];
-    [_reset setFrame: CGRectMake(_imageUser.frame.origin.x,_imageUser.frame.origin.y, _imageUser.frame.size.width, _imageUser.frame.size.height)];
-    
-    [UIImageView animateWithDuration:2 delay:0.5 usingSpringWithDamping:50 initialSpringVelocity:50 options:UIViewAnimationOptionCurveEaseInOut animations:^{[_imageUser setCenter:CGPointMake(0, 0)];} completion:^(BOOL Finished){
-        [_imageUser setCenter:CGPointMake(_reset.center.x, _reset.center.y)];}];
-    // 애니메이션 이후 제자리로 돌아옴
+//- (void)action:(UIButton *)sender {
+//    // user 이미지의 초기 위치를 저장하는 값 생성 및 저장
+//    _reset = [[UIView alloc] init];
+//    _reset.alpha = 0.0;
+//    [_view1 addSubview:_reset];
+//    [_reset setFrame: CGRectMake(_imageUser.frame.origin.x,_imageUser.frame.origin.y, _imageUser.frame.size.width, _imageUser.frame.size.height)];
+//    
+//    [UIImageView animateWithDuration:2 delay:0.5 usingSpringWithDamping:50 initialSpringVelocity:50 options:UIViewAnimationOptionCurveEaseInOut animations:^{[_imageUser setCenter:CGPointMake(0, 0)];} completion:^(BOOL Finished){
+//        [_imageUser setCenter:CGPointMake(_reset.center.x, _reset.center.y)];}];
+//    // 애니메이션 이후 제자리로 돌아옴
+//}
+
+- (BOOL)isCheckLoginwithID:(NSString *)userID userPW:(NSString *)userPW {
+    return NO;
 }
+
+//- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+//    if ([identifier isEqualToString:@"loginToMain"]) {
+//        if ([self isCheckLoginwithID:self.idField.text userPW:self.passwordField.text]) {
+//            return YES;
+//        } else {
+//            return NO;
+//        }
+//    } else {
+//        return NO;
+//    }
+//}
+//
+- (void)perpareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"loginToMain"]) {
+        
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
