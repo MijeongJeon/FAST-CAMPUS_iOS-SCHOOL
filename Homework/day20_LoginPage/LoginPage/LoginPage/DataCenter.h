@@ -10,4 +10,8 @@
 
 @interface DataCenter : NSObject
 
++ (instancetype)sharedInstance;
+- (NSArray *)findUserInfo;
+- (void)addUserInfoWithID:(NSString *)ID andEmail:(NSString *)email andPassword:(NSString *)password;
+
 @end

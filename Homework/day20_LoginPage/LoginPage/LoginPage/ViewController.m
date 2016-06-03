@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "DataCenter.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageGoogle;
 @property (nonatomic, weak) IBOutlet UIImageView *imageUser;
@@ -24,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _idField.delegate = self;
+    
     
 //    [_buttonLogin addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -61,6 +64,18 @@
         
     }
 }
+
+// ID입력후 엔터 누르면 다음칸으로 이동
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (_idField.text.length > 0) {
+        [_passwordField becomeFirstResponder];
+        return YES;
+    }
+
+    return NO;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -18,6 +18,8 @@
 		E903164D1CF2E496000B5BF6 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = E903164C1CF2E496000B5BF6 /* image3.png */; };
 		E9273EE31D00069B00A6686B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9273EE21D00069B00A6686B /* SignUpViewController.m */; };
 		E9273EE61D0006A600A6686B /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9273EE51D0006A600A6686B /* MainPageViewController.m */; };
+		E9DAC68D1D01B0A3005E4EF8 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DAC68C1D01B0A3005E4EF8 /* DataCenter.m */; };
+		E9DAC6931D01B1A0005E4EF8 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9DAC6921D01B1A0005E4EF8 /* UserInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		E9273EE21D00069B00A6686B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		E9273EE41D0006A600A6686B /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
 		E9273EE51D0006A600A6686B /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
+		E9DAC68B1D01B0A3005E4EF8 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		E9DAC68C1D01B0A3005E4EF8 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		E9DAC6921D01B1A0005E4EF8 /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +85,15 @@
 				E90316121CF2BF69000B5BF6 /* Main.storyboard */,
 				E9273EE11D00069B00A6686B /* SignUpViewController.h */,
 				E9273EE21D00069B00A6686B /* SignUpViewController.m */,
+				E9DAC68B1D01B0A3005E4EF8 /* DataCenter.h */,
+				E9DAC68C1D01B0A3005E4EF8 /* DataCenter.m */,
 				E9273EE41D0006A600A6686B /* MainPageViewController.h */,
 				E9273EE51D0006A600A6686B /* MainPageViewController.m */,
 				E90316151CF2BF69000B5BF6 /* Assets.xcassets */,
 				E90316171CF2BF69000B5BF6 /* LaunchScreen.storyboard */,
 				E903161A1CF2BF69000B5BF6 /* Info.plist */,
 				E90316091CF2BF68000B5BF6 /* Supporting Files */,
+				E9DAC6921D01B1A0005E4EF8 /* UserInfo.plist */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90316191CF2BF69000B5BF6 /* LaunchScreen.storyboard in Resources */,
+				E9DAC6931D01B1A0005E4EF8 /* UserInfo.plist in Resources */,
 				E903164D1CF2E496000B5BF6 /* image3.png in Resources */,
 				E90316241CF2C081000B5BF6 /* image2.png in Resources */,
 				E90316161CF2BF69000B5BF6 /* Assets.xcassets in Resources */,
@@ -176,6 +185,7 @@
 				E90316111CF2BF69000B5BF6 /* ViewController.m in Sources */,
 				E903160E1CF2BF68000B5BF6 /* AppDelegate.m in Sources */,
 				E9273EE31D00069B00A6686B /* SignUpViewController.m in Sources */,
+				E9DAC68D1D01B0A3005E4EF8 /* DataCenter.m in Sources */,
 				E903160B1CF2BF68000B5BF6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
