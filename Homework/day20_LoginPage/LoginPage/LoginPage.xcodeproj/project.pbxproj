@@ -79,21 +79,19 @@
 				E903160D1CF2BF68000B5BF6 /* AppDelegate.m */,
 				E903160F1CF2BF68000B5BF6 /* ViewController.h */,
 				E90316101CF2BF69000B5BF6 /* ViewController.m */,
-				E90316231CF2C081000B5BF6 /* image1.png */,
-				E90316221CF2C081000B5BF6 /* image2.png */,
-				E903164C1CF2E496000B5BF6 /* image3.png */,
-				E90316121CF2BF69000B5BF6 /* Main.storyboard */,
 				E9273EE11D00069B00A6686B /* SignUpViewController.h */,
 				E9273EE21D00069B00A6686B /* SignUpViewController.m */,
-				E9DAC68B1D01B0A3005E4EF8 /* DataCenter.h */,
-				E9DAC68C1D01B0A3005E4EF8 /* DataCenter.m */,
 				E9273EE41D0006A600A6686B /* MainPageViewController.h */,
 				E9273EE51D0006A600A6686B /* MainPageViewController.m */,
+				E9DAC68B1D01B0A3005E4EF8 /* DataCenter.h */,
+				E9DAC68C1D01B0A3005E4EF8 /* DataCenter.m */,
+				E98B69D71D054A0A00666FD7 /* images */,
+				E90316121CF2BF69000B5BF6 /* Main.storyboard */,
 				E90316151CF2BF69000B5BF6 /* Assets.xcassets */,
 				E90316171CF2BF69000B5BF6 /* LaunchScreen.storyboard */,
+				E9DAC6921D01B1A0005E4EF8 /* UserInfo.plist */,
 				E903161A1CF2BF69000B5BF6 /* Info.plist */,
 				E90316091CF2BF68000B5BF6 /* Supporting Files */,
-				E9DAC6921D01B1A0005E4EF8 /* UserInfo.plist */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";
@@ -104,6 +102,16 @@
 				E903160A1CF2BF68000B5BF6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E98B69D71D054A0A00666FD7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E90316231CF2C081000B5BF6 /* image1.png */,
+				E90316221CF2C081000B5BF6 /* image2.png */,
+				E903164C1CF2E496000B5BF6 /* image3.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

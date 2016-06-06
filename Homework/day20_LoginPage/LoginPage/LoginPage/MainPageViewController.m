@@ -7,8 +7,13 @@
 //
 
 #import "MainPageViewController.h"
+#import "DataCenter.h"
+#import "ViewController.h"
 
 @interface MainPageViewController ()
+
+@property(nonatomic)UILabel *welcomeLabel;
+@property(nonatomic)UIButton *logOutButton;
 
 @end
 
@@ -17,16 +22,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [UIView animateWithDuration:10 delay:0.5 options:UIViewAnimationOptionTransitionCurlUp animations:^{
-        [_melong setFrame:CGRectMake(20, 20, 50, 30)];} completion:^(BOOL finished){[_melong setFrame:CGRectMake(20, 20, 50, 30)];
-        }];
-
+    [self setWelcomeLabel];
+    [self setLogOutButton:_logOutButton];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
+// welcome 문구
+- (void)setWelcomeLabel {
+    _welcomeLabel = [[UILabel alloc] init];
+    [_welcomeLabel setFrame:CGRectMake(0, self.view.frame.size.height/2-20,self.view.frame.size.width, 40)];
+    [_welcomeLabel setTextAlignment:NSTextAlignmentCenter];
+    [_welcomeLabel setText:[@"Welcome " stringByAppendingString:[[DataCenter setUserDefaults] objectForKey:@"autoId"]]];
+    [_welcomeLabel setTextColor:[UIColor blackColor]];
+    [self.view addSubview:_welcomeLabel];
+}
+
+// logout button
+- (void)setLogOutButton:(UIButton *)logOutButton {
+    _logOutButton = [[UIButton alloc] init];
+    [_logOutButton setFrame:CGRectMake(0, self.view.frame.size.height-60,self.view.frame.size.width, 40)];
+    [_logOutButton setTitle:@"Logout" forState:UIControlStateNormal];
+    [_logOutButton setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:_logOutButton];
+    [_logOutButton addTarget:self action:@selector(logOutAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+ 
+- (void)logOutAction:(id)sender {
+    [[DataCenter setUserDefaults] removeObjectForKey:@"autoId"];
+    [[DataCenter setUserDefaults] removeObjectForKey:@"autoBool"];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

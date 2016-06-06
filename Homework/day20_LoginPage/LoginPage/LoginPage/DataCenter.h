@@ -11,7 +11,8 @@
 @interface DataCenter : NSObject
 
 + (instancetype)sharedInstance;
-- (NSArray *)findUserInfo;
+- (NSString *)findUserInfoPath;
 - (void)addUserInfoWithID:(NSString *)ID andEmail:(NSString *)email andPassword:(NSString *)password;
-
+- (void)removeFileContents;
++ (id)setUserDefaults;
 @end

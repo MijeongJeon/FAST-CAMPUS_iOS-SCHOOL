@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender;
+
 
 @end
 

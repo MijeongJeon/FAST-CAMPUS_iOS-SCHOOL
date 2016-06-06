@@ -8,6 +8,7 @@
 
 #import "SignUpViewController.h"
 #import "DataCenter.h"
+#import "MainPageViewController.h"
 
 @interface SignUpViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *IdTextField;
@@ -28,14 +29,11 @@
     _IdTextField.tag = 1;
     _emailTextField.delegate = self;
     _emailTextField.tag = 2;
+    _passwordTextField.delegate = self;
+    _passwordTextField.tag = 3;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
+// 엔터 클릭시 다음 칸으로 이동
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField.tag == 1 && textField.text.length> 0) {
         [_emailTextField becomeFirstResponder];
@@ -43,16 +41,24 @@
     if (textField.tag == 2 && textField.text.length> 0) {
         [_passwordTextField becomeFirstResponder];
     }
-
+    if (textField.tag == 3 && textField.text.length > 0) {
+        [_nextButton becomeFirstResponder];
+    }
     return NO;
 }
 
+// 가입 완료 버튼(NEXT)
 - (IBAction)addUserInfoButton:(id)sender {
     [[DataCenter sharedInstance] addUserInfoWithID:_IdTextField.text andEmail:_emailTextField.text andPassword:_passwordTextField.text];
-    
-    UIStoryboardSegue *signToMain = [UIStoryboardSegue segueWithIdentifier:<#(nullable NSString *)#> source:<#(nonnull UIViewController *)#> destination:<#(nonnull UIViewController *)#> performHandler:<#^(void)performHandler#>]
+  
 }
 
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation

@@ -4,27 +4,11 @@
 <array>
 	<dict>
 		<key>id</key>
-		<string>surfcode</string>
+		<string>MJ</string>
 		<key>email</key>
-		<string>surfcode@gmail.com</string>
+		<string>MJ@gmail.com</string>
 		<key>password</key>
-		<string>12345</string>
-	</dict>
-	<dict>
-		<key>id</key>
-		<string>cream</string>
-		<key>email</key>
-		<string>cream@gmail.com</string>
-		<key>password</key>
-		<string>12345</string>
-	</dict>
-	<dict>
-		<key>id</key>
-		<string>purple</string>
-		<key>email</key>
-		<string>purple@gmail.com</string>
-		<key>password</key>
-		<string>12345</string>
+		<string>123</string>
 	</dict>
 </array>
 </plist>

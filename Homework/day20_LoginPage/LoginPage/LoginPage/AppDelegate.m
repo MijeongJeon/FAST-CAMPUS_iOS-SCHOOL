@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DataCenter.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     return YES;
 }
 
@@ -26,6 +28,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
@@ -35,6 +38,15 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    if ([[DataCenter setUserDefaults] objectForKey:@"autoBool"]) {
+        NSLog(@"아이디가 자동 저장 되었습니다.");
+        ViewController *loginView = [[ViewController alloc] init];
+        [loginView shouldPerformSegueWithIdentifier:@"LoginToMain" sender:loginView];
+        [loginView.navigationController performSegueWithIdentifier:@"LoginToMain" sender:loginView];
+    } else {
+        NSLog(@"자동저장 되지 않았어요");
+    }
+    NSLog(@"BecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

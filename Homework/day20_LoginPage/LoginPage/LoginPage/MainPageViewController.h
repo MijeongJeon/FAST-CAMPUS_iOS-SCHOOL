@@ -10,6 +10,5 @@
 
 @interface MainPageViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UILabel *melong;
 
 @end
