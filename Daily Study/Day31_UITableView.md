@@ -48,3 +48,5 @@ Day31_UITableView
 - UITableView 객체 생성 
 - section 개수 설정, section당 row 개수 설정, indexPath당 cell 설정
 - DataSource, Delegate 호출
+
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day31_160607(TableView).png?" width="400px" />
