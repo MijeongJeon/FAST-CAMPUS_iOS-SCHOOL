@@ -1,0 +1,75 @@
+//
+//  ViewController.m
+//  TableViewExample
+//
+//  Created by youngmin joo on 2016. 6. 6..
+//  Copyright © 2016년 WingsCompany. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "DataCenter.h"
+
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@end
+
+@implementation ViewController
+
+// tableView 생성
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    UITableView *animalTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    animalTable.delegate = self;
+    animalTable.dataSource = self;
+    [self.view addSubview:animalTable];
+}
+
+// Section 수
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[DataCenter defaultData] sectionCount];
+}
+
+// Section 당 row 수
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray *animalArray = [[DataCenter defaultData] sectionTitles]; // sorting
+    NSDictionary *animalDic = [[DataCenter defaultData].allAnimals objectForKey:animalArray[section]];
+    
+    return animalDic.count;
+    
+    return 0;
+}
+
+
+// Section HeaderTitle
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    NSArray *animalArray = [[DataCenter defaultData] sectionTitles];
+    NSArray *sortArray = [animalArray sortedArrayUsingSelector:@selector(compare:)]; // sorting
+    
+    return sortArray[section];
+}
+
+// cell 생성 및 속성 입력
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    NSArray *animalKeyArray = [[DataCenter defaultData] sectionTitles];
+    
+    NSArray *animalArray = [[DataCenter defaultData].allAnimals objectForKey:animalKeyArray[indexPath.section]];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", animalArray[indexPath.row]]; // 동물이름 입력
+    [cell.imageView setImage:[UIImage imageNamed:[[DataCenter defaultData]imageNameWithAnimal:animalArray[indexPath.row]]]]; // 이미지 입력
+    
+    return cell;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+@end
