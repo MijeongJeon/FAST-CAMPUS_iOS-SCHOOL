@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>James</string>
+		<key>age</key>
+		<string>23</string>
+		<key>height</key>
+		<string>168</string>
+		<key>phone</key>
+		<string>01023450099</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Egg</string>
+		<key>age</key>
+		<string>5</string>
+		<key>height</key>
+		<string>110</string>
+		<key>phone</key>
+		<string>01029382929</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Egg</string>
+		<key>age</key>
+		<string>5</string>
+		<key>height</key>
+		<string>110</string>
+		<key>phone</key>
+		<string>01029382929</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Merry</string>
+		<key>age</key>
+		<string>39</string>
+		<key>height</key>
+		<string>155</string>
+		<key>phone</key>
+		<string>0109384920</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Paul</string>
+		<key>age</key>
+		<string>29</string>
+		<key>height</key>
+		<string>180</string>
+		<key>phone</key>
+		<string>0178298293</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Victor</string>
+		<key>age</key>
+		<string>28</string>
+		<key>height</key>
+		<string>183</string>
+		<key>phone</key>
+		<string>0102948503</string>
+	</dict>
+</array>
+</plist>
