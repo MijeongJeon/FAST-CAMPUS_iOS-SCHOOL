@@ -9,13 +9,14 @@
 #import "SignUpViewController.h"
 #import "DataCenter.h"
 #import "MainPageViewController.h"
+#import "ViewController.h"
 
 @interface SignUpViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *IdTextField;
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-@property (strong, nonatomic) UITextField *tempTextField;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+
 
 @end
 
@@ -27,21 +28,23 @@
     
     _IdTextField.delegate = self;
     _IdTextField.tag = 1;
-    _emailTextField.delegate = self;
-    _emailTextField.tag = 2;
     _passwordTextField.delegate = self;
-    _passwordTextField.tag = 3;
+    _passwordTextField.tag = 2;
+    
+    [_backButton addTarget:self action:@selector(goBackAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (IBAction)goBackAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 // 엔터 클릭시 다음 칸으로 이동
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField.tag == 1 && textField.text.length> 0) {
-        [_emailTextField becomeFirstResponder];
+        [_passwordTextField becomeFirstResponder];
     }
     if (textField.tag == 2 && textField.text.length> 0) {
         [_passwordTextField becomeFirstResponder];
-    }
-    if (textField.tag == 3 && textField.text.length > 0) {
         [_nextButton becomeFirstResponder];
     }
     return NO;
@@ -49,8 +52,23 @@
 
 // 가입 완료 버튼(NEXT)
 - (IBAction)addUserInfoButton:(id)sender {
-    [[DataCenter sharedInstance] addUserInfoWithID:_IdTextField.text andEmail:_emailTextField.text andPassword:_passwordTextField.text];
-  
+    ViewController *loginVC = [[ViewController alloc] init];
+
+    if (_IdTextField.text.length > 0 && _passwordTextField.text.length > 0) { // 모든 필드 기입
+        if ([[DataCenter sharedInstance] isCheckLoginwithID:_IdTextField.text]) {
+            // 중복 가입
+            [loginVC showAlert:@"ID Check" andMessage:@"Use Other ID" andidField:_IdTextField andVC:self];
+        } else {
+            // 중복 아님
+            [[DataCenter sharedInstance] addUserInfoWithID:_IdTextField.text andPassword:_passwordTextField.text];
+            [[DataCenter userDefaults] setObject:_IdTextField.text forKey:@"autoId"];
+            [[DataCenter userDefaults] setBool:YES forKey:@"autoBool"];
+        }
+    }
+        else {
+            [loginVC showAlert:@"Insert Field" andMessage:@"Insert ID and PW" andidField:_IdTextField andVC:self];
+        }
+
 }
 
 
