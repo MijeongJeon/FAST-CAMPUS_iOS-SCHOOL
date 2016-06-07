@@ -1,7 +1,8 @@
 Day24_UIComponent, Protocol
 --
 
-#### **이론**
+####:notebook: **이론**
+
 #####**Protocol**
 - 객체간 통신을 위한 규약으로, 객체가 수행해야할 역할/기능에 대한 정의만 해놓은 역할 정의서이다.
 -  각 객체의 역할/필요에 따라 메소드를 구현해 기능을 수행한다.
@@ -18,3 +19,9 @@ Day24_UIComponent, Protocol
 - 어떤 상황이 주어졌을때(사용자의 입력) 그에 맞는 반응을 알려주는 역할을 한다.(약속)
 - 만약, 상속을 통해 모든 기능을 구현해두면 재정의도 힘들고 다양한 기능을 상속 받을 수 없다.
 - ex) UITextFieldDelegte
+<br>
+<br>
+
+####:computer: **실습**
+- UIButoon 객체 생성 및 속성 부여
+- UITextFiled 객체 생성 및 delegate 활용
