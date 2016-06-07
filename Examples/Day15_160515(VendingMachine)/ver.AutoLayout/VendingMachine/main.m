@@ -1,0 +1,17 @@
+//
+//  main.m
+//  VendingMachine
+//
+//  Created by Mijeong Jeon on 5/13/16.
+//  Copyright © 2016 Mijeong Jeon. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+
+int main(int argc, char * argv[]) {
+    @autoreleasepool {
+        UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+    return 0;
+}
