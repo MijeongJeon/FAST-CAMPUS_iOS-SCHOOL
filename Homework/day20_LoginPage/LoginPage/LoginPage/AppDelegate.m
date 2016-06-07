@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DataCenter.h"
 #import "ViewController.h"
+#import "MainPageViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    if ([[DataCenter userDefaults] objectForKey:@"autoBool"]) {
+        NSLog(@"아이디가 자동저장 되었습니다.");
+
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        MainPageViewController *mainPageViewController = (MainPageViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"MainStoryBoard"];
+        UINavigationController *naviController = (UINavigationController *)self.window.rootViewController;
+        
+        [naviController pushViewController:mainPageViewController animated:YES];
+        
+}
     return YES;
 }
 
@@ -38,14 +49,6 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    if ([[DataCenter setUserDefaults] objectForKey:@"autoBool"]) {
-        NSLog(@"아이디가 자동 저장 되었습니다.");
-        ViewController *loginView = [[ViewController alloc] init];
-        [loginView shouldPerformSegueWithIdentifier:@"LoginToMain" sender:loginView];
-        [loginView.navigationController performSegueWithIdentifier:@"LoginToMain" sender:loginView];
-    } else {
-        NSLog(@"자동저장 되지 않았어요");
-    }
     NSLog(@"BecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
