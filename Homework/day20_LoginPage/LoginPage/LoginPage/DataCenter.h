@@ -12,7 +12,9 @@
 
 + (instancetype)sharedInstance;
 - (NSString *)findUserInfoPath;
-- (void)addUserInfoWithID:(NSString *)ID andEmail:(NSString *)email andPassword:(NSString *)password;
+- (BOOL)isCheckLoginwithID:(NSString *)userID userPW:(NSString *)userPW;
+- (BOOL)isCheckLoginwithID:(NSString *)userID;
+- (void)addUserInfoWithID:(NSString *)ID andPassword:(NSString *)password;
 - (void)removeFileContents;
-+ (id)setUserDefaults;
++ (id)userDefaults;
 @end
