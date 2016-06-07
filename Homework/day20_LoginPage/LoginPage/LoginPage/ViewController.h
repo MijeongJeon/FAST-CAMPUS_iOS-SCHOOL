@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender;
-
-
+- (void)showAlert:(NSString *)failTitle andMessage:(NSString *)failMessage andidField:(UITextField *)idField  andVC:(UIViewController *)VC;
 @end
 
