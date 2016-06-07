@@ -66,7 +66,10 @@ FAST-CAMPUS_iOS
 - [Day27. UIViewController and NavigationController](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day27_Graph.md)
 - Day28. 자료구조/알고리즘
 - Day29. Collection, Singleton, Data(Plist)
-- Day30. Review
+- Day30. Review(Delegate, Block)
+- Day31. UITableView
+
+
 
 
 <br>
