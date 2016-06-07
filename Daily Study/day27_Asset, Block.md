@@ -1,8 +1,9 @@
-Day27_Asset, Block
+Day25_Block, Animation, UIScrollView
 --
 
-#### **이론**
-- **Block**
+####:notebook: **이론**
+
+#####**Block**
 - 무명함수의 역할을 하는 객체
 - iOS 프레임워크에 기본적으로 구축되어있지만 사용자마다 다른 행동(함수)을 할 수있는 곳에 사용됨
 - 델리게이트와 비슷한 역할을 하지만 델리게이트에 비해 가독성이 뛰어나고, 코드 복잡도가 낮음
@@ -13,5 +14,6 @@ Day27_Asset, Block
 <br>
 - ****
 - 
-#### **실습**
-- 
+####:computer: **실습**
+- UIScrollView 생성 
+- Animation 효과 설정 및 block 함수 이용
