@@ -32,7 +32,7 @@
     _welcomeLabel = [[UILabel alloc] init];
     [_welcomeLabel setFrame:CGRectMake(0, self.view.frame.size.height/2-20,self.view.frame.size.width, 40)];
     [_welcomeLabel setTextAlignment:NSTextAlignmentCenter];
-    [_welcomeLabel setText:[@"Welcome " stringByAppendingString:[[DataCenter setUserDefaults] objectForKey:@"autoId"]]];
+    [_welcomeLabel setText:[@"Welcome " stringByAppendingString:[[DataCenter userDefaults] objectForKey:@"autoId"]]];
     [_welcomeLabel setTextColor:[UIColor blackColor]];
     [self.view addSubview:_welcomeLabel];
 }
@@ -48,11 +48,11 @@
 }
  
 - (void)logOutAction:(id)sender {
-    [[DataCenter setUserDefaults] removeObjectForKey:@"autoId"];
-    [[DataCenter setUserDefaults] removeObjectForKey:@"autoBool"];
+    [[DataCenter userDefaults] removeObjectForKey:@"autoId"];
+    [[DataCenter userDefaults] removeObjectForKey:@"autoBool"];
     [self.navigationController popToRootViewControllerAnimated:YES];
-
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
