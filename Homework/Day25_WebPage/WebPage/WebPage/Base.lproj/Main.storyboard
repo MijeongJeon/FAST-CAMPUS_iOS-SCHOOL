@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="view">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="6fD-m8-q7a" userLabel="lineView">
+                                <rect key="frame" x="-6" y="61" width="606" height="7"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.7803921568627451" green="0.77254901960784317" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="UbA-Sb-0Pm" userLabel="favoritView">
+                                <rect key="frame" x="0.0" y="63" width="600" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jPj-ER-7f4">
+                                        <rect key="frame" x="48" y="13" width="80" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="13"/>
+                                        <color key="textColor" red="0.39070391414141414" green="0.39070391414141414" blue="0.39070391414141414" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y9R-Jm-LXU" userLabel="google">
+                                        <rect key="frame" x="130" y="6" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="google.png"/>
+                                        <connections>
+                                            <action selector="actionGoGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xf4-D3-f3F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0nQ-5Z-wuP" userLabel="naver">
+                                        <rect key="frame" x="192" y="6" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="naver.ico"/>
+                                        <connections>
+                                            <action selector="actionGoNaver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Iz-3b-EeF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.8862745098" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <webView contentMode="scaleToFill" id="1NR-Ug-jGC">
+                                <rect key="frame" x="0.0" y="101" width="600" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" id="ZVe-e3-xTx" userLabel="topview">
+                                <rect key="frame" x="0.0" y="20" width="322" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="49s-cc-hiv">
+                                        <rect key="frame" x="19" y="10" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionGoBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x3A-gm-HnY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VCk-dR-l5y" userLabel="reload">
+                                        <rect key="frame" x="534" y="7" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="reload.png"/>
+                                        <connections>
+                                            <action selector="actionReload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ehd-Qz-9bz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o6s-f4-adZ">
+                                        <rect key="frame" x="67" y="8" width="33" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="&gt;">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionGoForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x8w-28-rih"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="MSN-p9-aaw">
+                                        <rect key="frame" x="119" y="7" width="74" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="0.78039215689999997" green="0.7725490196" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.88627450980392153" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZNX-0w-Evg" userLabel="facebook">
+                                <rect key="frame" x="91" y="205" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebook.png"/>
+                                <connections>
+                                    <action selector="actionGoFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUg-DO-Ygt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Hjd-oc-Vf2" userLabel="slack">
+                                <rect key="frame" x="136" y="147" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="slack.png"/>
+                                <connections>
+                                    <action selector="actionGoSlack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMR-NV-ZUj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hBj-ju-ppe" userLabel="trello">
+                                <rect key="frame" x="27" y="147" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="trello.png"/>
+                                <connections>
+                                    <action selector="actionGoTrello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5S-mr-kjM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WBE-Ya-Lea" userLabel="github">
+                                <rect key="frame" x="200" y="136" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="github.png"/>
+                                <connections>
+                                    <action selector="actionGoGithub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSY-XP-ngd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="facebook" destination="ZNX-0w-Evg" id="BT1-w7-4K1"/>
+                        <outlet property="favorite" destination="jPj-ER-7f4" id="owW-Kj-ujm"/>
+                        <outlet property="favoriteView" destination="UbA-Sb-0Pm" id="4WY-fo-SM0"/>
+                        <outlet property="github" destination="WBE-Ya-Lea" id="lFx-kM-oHP"/>
+                        <outlet property="goBack" destination="49s-cc-hiv" id="aI0-Tp-U7G"/>
+                        <outlet property="goForward" destination="o6s-f4-adZ" id="cqS-OG-Z6e"/>
+                        <outlet property="google" destination="y9R-Jm-LXU" id="YBP-CI-hdU"/>
+                        <outlet property="lineView" destination="6fD-m8-q7a" id="mlw-8q-fCt"/>
+                        <outlet property="naver" destination="0nQ-5Z-wuP" id="QFm-2x-9Kv"/>
+                        <outlet property="reload" destination="VCk-dR-l5y" id="w2S-Og-tud"/>
+                        <outlet property="slack" destination="Hjd-oc-Vf2" id="mjz-GI-0mw"/>
+                        <outlet property="topView" destination="ZVe-e3-xTx" id="lk7-JU-93H"/>
+                        <outlet property="trello" destination="hBj-ju-ppe" id="4mk-8s-jX8"/>
+                        <outlet property="url" destination="MSN-p9-aaw" id="8GJ-9I-H4b"/>
+                        <outlet property="webView" destination="1NR-Ug-jGC" id="FLv-CF-JMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="210"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook.png" width="1000" height="1000"/>
+        <image name="github.png" width="1000" height="961"/>
+        <image name="google.png" width="1000" height="1048"/>
+        <image name="naver.ico" width="256" height="256"/>
+        <image name="reload.png" width="512" height="512"/>
+        <image name="slack.png" width="1000" height="1000"/>
+        <image name="trello.png" width="1000" height="1000"/>
+    </resources>
+</document>
