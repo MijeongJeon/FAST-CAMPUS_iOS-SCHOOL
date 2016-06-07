@@ -67,7 +67,7 @@ FAST-CAMPUS_iOS
 - Day28. 자료구조/알고리즘
 - Day29. Collection, Singleton, Data(Plist)
 - Day30. Review(Delegate, Block)
-- [Day31. UITableView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/Daily%Study/Day31_UITableView.md)
+- [Day31. UITableView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day31_UITableView.md)
 
 
 <br>
