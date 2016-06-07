@@ -30,7 +30,7 @@
 }
 
 // UserInfo.plist파일에 번들 파일 복사 및 새 파일에 새로운 정보 추가
-- (void)addUserInfoWithID:(NSString *)ID andEmail:(NSString *)email andPassword:(NSString *)password {
+- (void)addUserInfoWithID:(NSString *)ID andPassword:(NSString *)password {
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if (![fileManager fileExistsAtPath:[self findUserInfoPath]]) {
@@ -39,9 +39,37 @@
     }
     
     NSMutableArray *userInfos = [NSMutableArray arrayWithContentsOfFile:[self findUserInfoPath]];
-    NSDictionary *newInfo = @{@"id":ID, @"email":email, @"password":password};
+    NSDictionary *newInfo = @{@"id":ID, @"password":password};
     [userInfos addObject:newInfo];
     [userInfos writeToFile:[self findUserInfoPath] atomically:NO];
+}
+
+// 입력된 ID와 Password가 가입되어있는 정보인지 확인
+- (BOOL)isCheckLoginwithID:(NSString *)userID userPW:(NSString *)userPW {
+    if (userID.length > 0 && userPW.length > 0) {
+    NSArray *infoArray = [NSArray arrayWithContentsOfFile:[[DataCenter sharedInstance] findUserInfoPath]];
+    for (NSDictionary *infoDic in infoArray) {
+        NSString *insertedID = [infoDic objectForKey:@"id"];
+        NSString *insertedPW = [infoDic objectForKey:@"password"];
+        if ([insertedID isEqualToString:userID] && [insertedPW isEqualToString:userPW]) {
+            return YES;
+        }
+    }
+    return NO;
+    }
+    return NO;
+}
+
+// 입력된 ID가 가입되어있는 정보인지 확인
+- (BOOL)isCheckLoginwithID:(NSString *)userID {
+        NSArray *infoArray = [NSArray arrayWithContentsOfFile:[[DataCenter sharedInstance] findUserInfoPath]];
+        for (NSDictionary *infoDic in infoArray) {
+            NSString *insertedID = [infoDic objectForKey:@"id"];
+            if ([insertedID isEqualToString:userID]) {
+                return YES;
+            }
+        }
+        return NO;
 }
 
 // 파일 정보 삭제
@@ -50,7 +78,7 @@
 }
 
 // 오토로그인 정보 저장을 위한 userDefault 생성
-+ (id)setUserDefaults {
++ (id)userDefaults {
     NSUserDefaults *autoLoginInfo = [NSUserDefaults standardUserDefaults];
     NSLog(@"userDefault가 불렸어요");
     return autoLoginInfo;
