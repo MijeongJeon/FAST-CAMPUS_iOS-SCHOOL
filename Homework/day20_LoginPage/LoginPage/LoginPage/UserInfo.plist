@@ -4,11 +4,9 @@
 <array>
 	<dict>
 		<key>id</key>
-		<string>MJ</string>
-		<key>email</key>
-		<string>MJ@gmail.com</string>
+		<string>Dafault</string>
 		<key>password</key>
-		<string>123</string>
+		<string>default</string>
 	</dict>
 </array>
 </plist>
