@@ -15,10 +15,12 @@ Day31_UITableView
 - 전체 section 개수, 각 section 내 row의 개수, row별 cell객체 설정
 - TableView 생성에 기본적인 정보를 전달함
 - 필수 메소드
-<br>
-`- (NSInteger)tableView:(UITableView *)tableView numberOfRowsinsection:(NSInteger)section;
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;`
-<br>
+
+```objective-c
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsinsection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+```
+
 (자동으로 for문이 돌면서 section * row 만큼의 cell이 생성된다.)
 <br>
 <br>
