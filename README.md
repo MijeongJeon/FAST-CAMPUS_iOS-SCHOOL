@@ -52,10 +52,10 @@ FAST-CAMPUS_iOS
 - Day16. Cocoa Touch Framework_Storyboard 활용
 - Day17. NSObject Life Cycle, Auto Layout 활용
 - Day18. 자료구조/알고리즘-
--  [Day19. 열거, 옵션, ARC, Property](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day19_ARC%2C%20property.md)
+- Day19. 열거, 옵션, ARC, Property
 - Day20. Github desktop, Autolayout 실습, property
 - Day21. 자료구조/알고리즘
--  [Day22. UI Component1_UIView, UILabel, UIImageView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day21_UIView%2C%20UILabel.md)
+- Day22. UI Component1_UIView, UILabel, UIImageView
 - Day23. 자료구조/알고리즘
 - Day24. UI Component2_UIControl, UIButton/ protocol, delegate
 - Day25. UI Component3_Animation, Block, UITextField
@@ -63,13 +63,11 @@ FAST-CAMPUS_iOS
 <br>
 >   **Unit4. ViewControl and DB Connect**
 - Day26. 자료구조/알고리즘
-- [Day27. UIViewController and NavigationController](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day27_Graph.md)
+- Day27. UIViewController and NavigationController
 - Day28. 자료구조/알고리즘
 - Day29. Collection, Singleton, Data(Plist)
 - Day30. Review(Delegate, Block)
-- Day31. UITableView
-
-
+- [Day31. UITableView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/Daily%Study/Day31_UITableView.md)
 
 
 <br>
@@ -77,5 +75,5 @@ FAST-CAMPUS_iOS
 - Day18. 자료구조/알고리즘_알고리즘 실습, stack 구조 만들기
 - Day21. 자료구조/알고리즘_스택, 덱, 큐 실습
 - Day23. 자료구조/알고리즘_다이나믹 프로그래밍
-- [Day26. 자료구조/알고리즘_그래프 DFS, BFS, 이분 그래프](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day26_Graph.md)
-- [Day28. 자료구조/알고리즘_지하철 노선도 만들기](https://github.com/MijeongJeon/FAST-CAMPUS_iOS/blob/master/Daily%20Study/day28_Graph.md)
+- Day26. 자료구조/알고리즘_그래프 DFS, BFS, 이분 그래프
+- Day28. 자료구조/알고리즘_지하철 노선도 만들기
