@@ -5,4 +5,4 @@ Day14_Class 만들기
 - 숫자 뒤집기
 - 연/일로부터 날짜 구하기
 
-[Move to Folder](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/tree/master/Project/Day14_MakeClasse)
+####[Move to Code](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/tree/master/Project/Day14_MakeClasse)
