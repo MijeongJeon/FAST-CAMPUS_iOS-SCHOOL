@@ -66,3 +66,27 @@
 - card, dealer 클래스 및 변수 선언
 - 카드 덱(52장) 만들기, 카드 섞기, 카드 출력 메소드 만들기 
 
+##### Day16.
+- Apple Cocoa Convention 공부
+- 지금까지 코드 변수명 수정
+
+##### Day17.
+- ARC 조사
+
+##### Day20.
+- 로그인 화면, 회원가입 UI화면 만들기
+- Navigation으로 화면 전환
+
+##### Day25.
+- 웹뷰를 이용한 웹페이지 어플 만들기
+- 앞뒤 이동 버튼 구현(비활성화 기능구현)
+
+##### Day29.
+- JSON 조사
+
+##### Day31.
+- UITableView를 이용해 동물농장 만들기
+- Delegate/DataSource 이용
+- Sorting 구현
+
+
