@@ -67,14 +67,16 @@
 
 - (NSArray *)sectionTitles
 {
-    return self.animals.allKeys;
+    NSArray *sortedArray = [_animals.allKeys sortedArrayUsingSelector:@selector(compare:)]; // sorting
+
+    return sortedArray;
+//    return self.animals.allKeys;
 }
 
 - (NSInteger)sectionCount
 {
     return self.animals.count;
 }
-
 
 - (NSString *)imageNameWithAnimal:(NSString *)animal
 {

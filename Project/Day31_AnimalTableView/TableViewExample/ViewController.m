@@ -22,6 +22,8 @@
     animalTable.delegate = self;
     animalTable.dataSource = self;
     [self.view addSubview:animalTable];
+    
+    
 }
 
 // Section 수
@@ -43,10 +45,7 @@
 // Section HeaderTitle
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    NSArray *animalArray = [[DataCenter defaultData] sectionTitles];
-    NSArray *sortArray = [animalArray sortedArrayUsingSelector:@selector(compare:)]; // sorting
-    
-    return sortArray[section];
+    return [[DataCenter defaultData] sectionTitles][section];;
 }
 
 // cell 생성 및 속성 입력
@@ -65,6 +64,13 @@
     
     return cell;
 }
+
+// index list 출력
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    
+    return [[DataCenter defaultData] sectionTitles];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
