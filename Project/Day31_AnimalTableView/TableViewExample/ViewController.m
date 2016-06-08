@@ -28,23 +28,21 @@
 
 // Section 수
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    NSLog(@"%zd",[[DataCenter defaultData] sectionCount]);
     return [[DataCenter defaultData] sectionCount];
 }
 
 // Section 당 row 수
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *animalArray = [[DataCenter defaultData] sectionTitles]; // sorting
+    NSArray *animalArray = [[DataCenter defaultData] sectionTitles];
     NSDictionary *animalDic = [[DataCenter defaultData].allAnimals objectForKey:animalArray[section]];
     
     return animalDic.count;
-    
-    return 0;
 }
 
 
 // Section HeaderTitle
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
     return [[DataCenter defaultData] sectionTitles][section];;
 }
 
