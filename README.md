@@ -68,7 +68,8 @@ FAST-CAMPUS_iOS
 - Day29. Collection, Singleton, Data(Plist)
 - Day30. Review(Delegate, Block)
 - [Day31. UITableView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day31_UITableView.md)
-- [Day32. UITableView Costomize](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day32_UITableView%20Customize.md)
+- [Day32. UITableView Customize](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day32_UITableView%20Customize.md)
+- [Day33. UITableViewCell Edit(Del/Add)](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day33_UITableView%20Edit%2C%20KVO.md)
 
 
 <br>
