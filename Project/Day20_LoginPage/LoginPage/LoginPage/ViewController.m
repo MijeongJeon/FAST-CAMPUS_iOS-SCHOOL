@@ -25,13 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _idField.delegate = self;
-    _idField.tag = 1;
-    _passwordField.delegate = self;
-    _passwordField.tag = 2;
+    self.idField.delegate = self;
+    self.idField.tag = 1;
+    self.passwordField.delegate = self;
+    self.passwordField.tag = 2;
     
     if (!([[DataCenter userDefaults] objectForKey:@"autoId"] == nil)) {
-    _idField.text = [[DataCenter userDefaults] objectForKey:@"autoId"];
+    self.idField.text = [[DataCenter userDefaults] objectForKey:@"autoId"];
     }
     [self displayMemberInfo];
     [self.navigationController setNavigationBarHidden:YES];
@@ -41,17 +41,17 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     
     if ([identifier isEqualToString:@"LoginToMain"]) {
-        if (_idField.text.length > 0 && _passwordField.text.length > 0) {
-            if ([[DataCenter sharedInstance] isCheckLoginwithID:_idField.text userPW:_passwordField.text]) {
-                [[DataCenter userDefaults] setObject:_idField.text forKey:@"autoId"];
+        if (self.idField.text.length > 0 && self.passwordField.text.length > 0) {
+            if ([[DataCenter sharedInstance] isCheckLoginwithID:self.idField.text userPW:self.passwordField.text]) {
+                [[DataCenter userDefaults] setObject:self.idField.text forKey:@"autoId"];
                 [[DataCenter userDefaults] setBool:YES forKey:@"autoBool"];
                 return YES;
             } else {
-                [self showAlert:@"Login Fail" andMessage:@"Invalid User Information" andidField:_idField andVC:self];
+                [self showAlert:@"Login Fail" andMessage:@"Invalid User Information" andidField:self.idField andVC:self];
                 return NO;
             }
         } else {
-            [self showAlert:@"Insert Field" andMessage:@"Inserd ID and PW" andidField:_idField andVC:self];
+            [self showAlert:@"Insert Field" andMessage:@"Insert ID and PW" andidField:self.idField andVC:self];
         }
     } else {
     }
@@ -60,11 +60,11 @@
 
 // ID입력후 엔터 누르면 다음칸으로 이동, PW입력후 엔터 누르면 버튼 클릭
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (textField.tag ==1 && _idField.text.length > 0) {
-        [_passwordField becomeFirstResponder];
+    if (textField.tag ==1) {
+        [self.passwordField becomeFirstResponder];
         return YES;
     }
-    if (textField.tag == 2 && _passwordField.text.length > 0) {
+    if (textField.tag == 2) {
         if ([self shouldPerformSegueWithIdentifier:@"LoginToMain" sender:self]) {
             [self performSegueWithIdentifier:@"LoginToMain" sender:self];
         }
@@ -75,12 +75,6 @@
 // 알림 표시
 
 - (void)showAlert:(NSString *)failTitle andMessage:(NSString *)failMessage andidField:(UITextField *)idField  andVC:(UIViewController *)VC{
-    id block = ^(UIAlertAction * _Nonnull action) {
-        
-        if ([action.title isEqualToString:@"Try Agian"]) {
-            [idField becomeFirstResponder];
-        }
-    };
     
     UIAlertController *alertController = [UIAlertController
                                           alertControllerWithTitle:failTitle
@@ -88,9 +82,11 @@
                                           preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *tryAgainction = [UIAlertAction actionWithTitle:@"Try Again"
                                                             style:UIAlertActionStyleDefault
-                                                          handler:block];
+                                                          handler:^(UIAlertAction * _Nonnull action){
+                                                              [idField becomeFirstResponder];
+                                                          }];
     [alertController addAction:tryAgainction];
-    [VC presentViewController:alertController animated:YES completion:^(void) {[idField becomeFirstResponder];}];
+    [VC presentViewController:alertController animated:YES completion:nil];
 }
 
 

@@ -40,11 +40,10 @@
 
 // 엔터 클릭시 다음 칸으로 이동
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (textField.tag == 1 && textField.text.length> 0) {
+    if (textField.tag == 1) {
         [_passwordTextField becomeFirstResponder];
     }
-    if (textField.tag == 2 && textField.text.length> 0) {
-        [_passwordTextField becomeFirstResponder];
+    if (textField.tag == 2) {
         [_nextButton becomeFirstResponder];
     }
     return NO;
@@ -52,7 +51,7 @@
 
 // 가입 완료 버튼(NEXT)
 - (IBAction)addUserInfoButton:(id)sender {
-    ViewController *loginVC = [[ViewController alloc] init];
+    ViewController *loginVC = [[ViewController alloc] init]; ///////// 클래스 새로 생성하기, _ ->self로 변경, 데이터소스 array 생성
 
     if (_IdTextField.text.length > 0 && _passwordTextField.text.length > 0) { // 모든 필드 기입
         if ([[DataCenter sharedInstance] isCheckLoginwithID:_IdTextField.text]) {

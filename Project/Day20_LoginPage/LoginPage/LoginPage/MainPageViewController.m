@@ -23,8 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setWelcomeLabel];
-    [self setLogOutButton:_logOutButton];
-    [self.navigationController setNavigationBarHidden:YES];
+    [self setLogOutButton];
 }
 
 // welcome 문구
@@ -38,7 +37,7 @@
 }
 
 // logout button
-- (void)setLogOutButton:(UIButton *)logOutButton {
+- (void)setLogOutButton {
     _logOutButton = [[UIButton alloc] init];
     [_logOutButton setFrame:CGRectMake(0, self.view.frame.size.height-60,self.view.frame.size.width, 40)];
     [_logOutButton setTitle:@"Logout" forState:UIControlStateNormal];

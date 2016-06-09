@@ -46,7 +46,6 @@
 
 // 입력된 ID와 Password가 가입되어있는 정보인지 확인
 - (BOOL)isCheckLoginwithID:(NSString *)userID userPW:(NSString *)userPW {
-    if (userID.length > 0 && userPW.length > 0) {
     NSArray *infoArray = [NSArray arrayWithContentsOfFile:[[DataCenter sharedInstance] findUserInfoPath]];
     for (NSDictionary *infoDic in infoArray) {
         NSString *insertedID = [infoDic objectForKey:@"id"];
@@ -54,8 +53,6 @@
         if ([insertedID isEqualToString:userID] && [insertedPW isEqualToString:userPW]) {
             return YES;
         }
-    }
-    return NO;
     }
     return NO;
 }
