@@ -14,7 +14,7 @@ Day33_UITableView Edit, KVO
 // 어느 셀에서 삭제/추가 가능하게 만들것인가(조건이 ENUM으로 구성되어있어 하나만 선택가능)
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-// 삭제시에 이루어질 행동들(테이블의 row를 삭제하기 전에 데이터를 먼저 삭제해줘야함)
+// 삭제/추가시 구현될 행동들(삭제시: 테이블의 row를 삭제하기 전에 데이터를 먼저 삭제해줘야함)
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 ```
 <br>
