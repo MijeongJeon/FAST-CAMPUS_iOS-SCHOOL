@@ -70,6 +70,7 @@ FAST-CAMPUS_iOS
 - [Day31. UITableView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day31_UITableView.md)
 - [Day32. UITableView Customize](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day32_UITableView%20Customize.md)
 - [Day33. UITableViewCell Edit(Del/Add)](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day33_UITableView%20Edit%2C%20KVO.md)
+- [Day34. Alert and ImagePickerView](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day34_Alert%2C%20ImagePickerView.md)
 
 
 <br>
