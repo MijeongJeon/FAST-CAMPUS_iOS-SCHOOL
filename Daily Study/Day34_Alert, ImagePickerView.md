@@ -1,9 +1,10 @@
 Day34_Alert, ImagePickerView
 --
 <br>
-####:notebook: **이론**
+###:notebook: **이론**
+<br>
 
-#####**Alert**
+####**Alert**
 - UIAlertController: Alert Controller Style// Action Sheet Style
 - UIAlertAction: Default, Destructive(red), Cancel(only one)
 - Modal(presentViewController)를 이용해 화면에 띄운다.
@@ -23,14 +24,14 @@ UIAlertAction *action = [UIAlertAction actionWithTitle:@"actionTitle"
 <br>
 <br>
 
-#####**Gesture Recognizer**
+####**Gesture Recognizer**
 - View위에 형태없이 존재하며 다양한 이벤트를 감지함
 - 옵션값을 이용해 터치 수와, 터시 손가락 수 설정 가능
 - delegate를 이용하거나 action method연결을 통해 행동을 설정할 수 있음
 <br>
 <br>
 
-#####**ImagePickerView**
+####**ImagePickerView**
 - 라이브러리, 카메라롤, 카메라로부터 사진을 가져오는 기능이 구현되어있는 클래스
 - 옵션을 이용해 사진을 가져올시 크롭편집을 가능하게 할 수 있음
 - ImagePickerViewDelegate를 이용해 화면에 이미지를 보여줄수 있음
@@ -40,7 +41,7 @@ UIAlertAction *action = [UIAlertAction actionWithTitle:@"actionTitle"
 // 이미지가 선택됬을때 행동 지정 delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info;
 ```
-<br>
+
 ```objective-c
 // info dictionary keys
 NSString *const UIImagePickerControllerMediaType;       // an NSString (UTI, i.e. kUTTypeImage)
@@ -55,23 +56,28 @@ NSString *const UIImagePickerControllerLivePhoto;       // a PHLivePhoto
 <br>
 <br>
 
-####:computer: **실습**
+###:computer: **실습**
 - Alert 구현
 - Gesture recognize를 이용한 화면 전체 이벤트 감지 구현
 - imagePickerView 생성 및 화면 사이즈 조절
 
 // Alert Style
+<br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day34_160610(Alert)1.png?" width="400px" />
 
 // Action Sheet Style
+<br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day34_160610(Alert)2.png?" width="400px" />
 
 // Gesture Recognize
+<br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day34_160610(ImagePicker)1.png?" width="400px" />
 
 // ImagePickerView
+<br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day34_160610(ImagePicker)2.png?" width="400px" />
 
 // ImageView + ViewContentMode
+<br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day34_160610(ImagePicker)3.png?" width="400px" />
 
