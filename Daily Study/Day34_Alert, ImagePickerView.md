@@ -18,7 +18,7 @@ UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
 UIAlertAction *action = [UIAlertAction actionWithTitle:@"actionTitle"
                                                  style:UIAlertActionStyle
                                                handler:^(UIAlertAction * _Nonnull action) {
-                                            }];
+                                                       }];
 
 ```
 <br>
