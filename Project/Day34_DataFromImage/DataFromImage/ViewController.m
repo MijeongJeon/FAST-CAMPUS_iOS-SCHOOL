@@ -102,7 +102,7 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     NSLog(@"Date : %@",asset.creationDate); // 그리니치 평균시(우리나라는 +9시간해야함)
 
 
-    ///// ALAsset 옛날 버전////
+//    ///// ALAsset 옛날 버전////
 //    NSURL *referenceURL = [info objectForKey:UIImagePickerControllerReferenceURL];
 //    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
 //    [library assetForURL:referenceURL resultBlock:^(ALAsset *asset) {
