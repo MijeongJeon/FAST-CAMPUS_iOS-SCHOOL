@@ -68,7 +68,6 @@
         }
         
         [cell.textLabel setText:text];
-        
         BOOL isFunctionOn = [self.dataCenter isOnForSetting:indexPath.row];
         [cell.settingSwitch setOn:isFunctionOn];
         return cell;
