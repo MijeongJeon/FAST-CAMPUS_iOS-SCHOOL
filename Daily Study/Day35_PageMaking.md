@@ -11,10 +11,10 @@ Day35_PageMaking
 
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day35_160614(PageMaking)1.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day35_160613(PageMaking)1.png?" width="400px" />
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day35_160614(PageMaking)2.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day35_160613(PageMaking)2.png?" width="400px" />
 
 
 
