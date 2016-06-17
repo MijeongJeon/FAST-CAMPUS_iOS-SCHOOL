@@ -2,7 +2,6 @@ Day39_GCD(Grand Gentral Dispatch)
 --
 <br>
 ###:notebook: **이론**
-<br>
 
 ####**GCD(Grand Central Dispatch)**
 - 비동기로 여러작업을 수행시키는 방법
@@ -47,10 +46,12 @@ dispatch_get_create("queue.name", DISPATCH_QUEUE_SERIAL);
 - GDC queue 생성 및 동기/비동기 활성화 실습
 - GDC를 이용한 스탑워치 만들기
 
+- NSTimer를 이용한 스탑워치 만들기
+
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day37_160615(TableView)1.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day39_160617(NSTimer)1.png?" width="400px" />
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day37_160615(TableView)2.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day39_160617(NSTimer)2.png?" width="400px" />
 

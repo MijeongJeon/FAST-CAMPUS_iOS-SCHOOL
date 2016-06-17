@@ -2,7 +2,6 @@ Day38_NSNotification, Thread
 --
 <br>
 ###:notebook: **이론**
-<br>
 
 ####**NSNotificationCenter**
 - 객체간 통신 (1:다수)을 위한 방식
@@ -11,7 +10,6 @@ Day38_NSNotification, Thread
 - Delegate : 1:1로 직접적인 통신이 가능하나 구현이 복잡하고 어려움
 - KVO : 실시간으로 변화를 감지하고 있기 때문에 성능 이슈 발생
 <br>
-
 ```objective-c
 //***********************NSNotificationCenter***********************//
 // 변화를 감지하는 클래스에서 observer 등록
@@ -34,7 +32,6 @@ object:(nullable id)anObject;
 - Multi thread : 2개 이상의 thread를 사용하는 경우
 - 동시 작업이 필요하거나, 중요한 작업(사용자 이벤트)에 방해를 받지 않기위해, 무거운 작업을 실행할때 사용한다.
 <br>
-
 ```objective-c
 //***********************NSThread***********************//
 // NSThread init
