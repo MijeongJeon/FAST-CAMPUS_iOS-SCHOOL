@@ -40,7 +40,24 @@ dispatch_get_create("queue.name", DISPATCH_QUEUE_SERIAL);
 
 ```
 <br>
+####**NSTimer**
+- iOS에서 간단한 interval noti를 제공해주는 클래스로 mainLoop에서 실행된다.
+- 간단한 방법으로 타이머를 구혀할 수 있다.
 
+```objective-c
+
+// NSTimer 생성
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)ti 
+                                     target:(id)aTarget 
+                                   selector:(SEL)aSelector 
+                                   userInfo:(nullable id)userInfo 
+                                    repeats:(BOOL)yesOrNo;
+
+@property (readonly, getter=isValid) BOOL valid;
+
+- (void)invalidate;
+```
+<br>
 
 ###:computer: **실습**
 - GDC queue 생성 및 동기/비동기 활성화 실습
