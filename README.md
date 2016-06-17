@@ -74,7 +74,8 @@ FAST-CAMPUS_iOS
 - [Day35. PageMakking](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day35_PageMaking.md)
 - [Day36. TabBarController](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day36_TabBar.md)
 - [Day37. TableView Making](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day37_TableView.md)
-- [Day38. NSNotification, Thread]
+- [Day38. NSNotification, Thread](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day38_NSNotification%2C%20Thread.md)
+- [Day39. GCD, NSTimer](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day39_GCD.md)
 
 <br>
 >   **Data Structure and Algorithm(자료구조/알고리즘)**
