@@ -12,20 +12,13 @@ Day38_NSNotification, Thread
 - KVO : 실시간으로 변화를 감지하고 있기 때문에 성능 이슈 발생
 <br>
 
-####**NSThread**
-- thread란 하나의 프로세스 내에서 실행되는 작업 흐름의 단위를 의미한다.
-- 모든 app은 하나의 main thread를 가지고 있으며, UI와 행동(이벤트, 액션) main thread에서 관린된다.
-- Multi thread : 2개 이상의 thread를 사용하는 경우
-- 동시 작업이 필요하거나, 중요한 작업(사용자 이벤트)에 방해를 받지 않기위해, 무거운 작업을 실행할때 사용한다.
-
-
 ```objective-c
 //***********************NSNotificationCenter***********************//
 // 변화를 감지하는 클래스에서 observer 등록
 - (void)addObserver:(id)observer   
-        selector:(SEL)aSelector 
-            name:(nullable NSString *)aName 
-          object:(nullable id)anObject;
+selector:(SEL)aSelector 
+name:(nullable NSString *)aName 
+object:(nullable id)anObject;
 
 // 변화를 알려주는 클래스에서 post
 - (void)postNotificationName:(NSString *)aName object:(nullable id)anObject;
@@ -34,6 +27,14 @@ Day38_NSNotification, Thread
 - (void)removeObserver:(id)observer name:(nullable NSString *)aName object:(nullable id)anObject;
 ```
 <br>
+
+####**NSThread**
+- thread란 하나의 프로세스 내에서 실행되는 작업 흐름의 단위를 의미한다.
+- 모든 app은 하나의 main thread를 가지고 있으며, UI와 행동(이벤트, 액션) main thread에서 관린된다.
+- Multi thread : 2개 이상의 thread를 사용하는 경우
+- 동시 작업이 필요하거나, 중요한 작업(사용자 이벤트)에 방해를 받지 않기위해, 무거운 작업을 실행할때 사용한다.
+<br>
+
 ```objective-c
 //***********************NSThread***********************//
 // NSThread init
@@ -58,7 +59,7 @@ Day38_NSNotification, Thread
 
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day38_160616(NSNotification)1png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day38_160616(NSNotification)1.png?" width="400px" />
 
 <br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day38_160616(NSNotification)2.png?" width="400px" />
