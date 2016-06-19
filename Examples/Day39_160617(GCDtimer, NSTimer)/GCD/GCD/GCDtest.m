@@ -20,23 +20,24 @@
     // global queue 생성
     dispatch_queue_t testQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
-    
     // gueue 실행
-    dispatch_sync(testQueue, ^{ NSLog(@"Call 1");});
+    
+    // main queue에서 async test(순차적 실행)
+    dispatch_async(dispatch_get_main_queue(), ^{ NSLog(@"Call 1");});
     
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC));
     dispatch_time_t time2 = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC));
     
-    dispatch_after(time, testQueue, ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         for (NSInteger i = 0; i < 5000; i++) {
             NSLog(@"%ld",i); }
     } );
     
-    dispatch_sync(testQueue, ^{ NSLog(@"Call 3");});
+    dispatch_async(dispatch_get_main_queue(), ^{ NSLog(@"Call 3");});
     
-    dispatch_sync(testQueue, ^{ NSLog(@"Call 4");});
+    dispatch_async(dispatch_get_main_queue(), ^{ NSLog(@"Call 4");});
     
-    dispatch_sync(testQueue, ^{ NSLog(@"Call 5");});
+    dispatch_async(dispatch_get_main_queue(), ^{ NSLog(@"Call 5");});
     
     dispatch_after(time2, testQueue, ^{ NSLog(@"delay 2s");});
 }
