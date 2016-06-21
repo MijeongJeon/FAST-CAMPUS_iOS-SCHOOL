@@ -29,8 +29,8 @@ Day40_DataBase1
 
 
 ###:computer: **실습**
-- H2 데이터베이스 설치 
-- MongoDB 계정 개설 및 공간 생성
+- [H2 데이터베이스 설치](http://www.h2database.com/html/download.html)
+- [MongoDB 계정 개설 및 공간 생성](http://mlab.com)
 
 - 쇼핑몰 상품 테이블 생성
 - 쇼핑몰 장바구니 구현
@@ -41,6 +41,8 @@ Day40_DataBase1
 <br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)1.png?" width="400px" />
 <br>
+
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)2.png?" width="400px" />
 <br>
+
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)3.png?" width="400px" />

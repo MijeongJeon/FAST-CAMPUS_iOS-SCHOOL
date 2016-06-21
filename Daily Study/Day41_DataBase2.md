@@ -3,8 +3,7 @@ Day41_DataBase2
 <br>
 ###:notebook: **이론**
 
-####**RDB와 NoSQL**
-**RDB(SQL)**
+####**RDB**
 - 정적인 구조 
 - 스키마에 의해 규격화되어있음(실수 방지 가능)
 - table 형태를 지님
@@ -12,9 +11,8 @@ Day41_DataBase2
 - 내용이 row에 담김
 - index를 지님(빠른 검색을 위해 필요함)
 <br>
-<br>
 
-**NoSQL**
+####**NoSQL**
 - 동적인 구조로 자유도가 높음(개발자의 책임도가 높아짐)
 - collection 형태를 지님
 - field에 "key:value" 쌍으로 내용 담김
