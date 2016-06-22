@@ -161,10 +161,11 @@
     
     // 알럿에 사용자의 입력을 받기위해 텍스트 필드를 추가한다
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        // 블럭 내부에는 텍스트 필드의 폰트, 모양, 플레이스 폴더 등의 설정을 위한 코드를 넣어줄 수 있다.
+    // 블럭 내부에는 텍스트 필드의 폰트, 모양, 플레이스 폴더 등의 설정을 위한 코드를 넣어줄 수 있다.
         [textField setPlaceholder:@"School Name"];
     }];
-
+    // alert 창 레이아웃 맞춰줌(콘솔 에러제거)
+    [alert.view setNeedsLayout];
     [self presentViewController:alert animated:YES completion:nil];
     
 }
