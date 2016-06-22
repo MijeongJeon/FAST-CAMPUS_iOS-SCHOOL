@@ -78,7 +78,7 @@ FAST-CAMPUS_iOS
 - [Day39. GCD, NSTimer](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day39_GCD.md)
 - [Day40. Databese1_관계형 데이터베이스/비관계형 데이터베이스](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day40_DataBase1.md)
 - [Day41. Databese2_적절한 데이터베이스 선택하기](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day41_DataBase2.md)
-
+- [Dat42. CoreData, Mini Project 시작]
 
 <br>
 >   **Data Structure and Algorithm(자료구조/알고리즘)**
