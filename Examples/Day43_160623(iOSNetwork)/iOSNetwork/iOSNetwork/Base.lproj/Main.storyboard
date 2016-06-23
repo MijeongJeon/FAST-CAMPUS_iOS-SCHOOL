@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-Ti-wWY">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4mQ-Ti-wWY" secondAttribute="bottom" id="7Fh-Et-6T6"/>
+                            <constraint firstItem="4mQ-Ti-wWY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KO5-tt-7IO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4mQ-Ti-wWY" secondAttribute="trailing" id="N2p-3Z-zJz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4mQ-Ti-wWY" secondAttribute="bottom" id="Sfj-DQ-IUA"/>
+                            <constraint firstItem="4mQ-Ti-wWY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="V1Q-J9-6bW"/>
+                            <constraint firstItem="4mQ-Ti-wWY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fmU-vL-QUp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4mQ-Ti-wWY" secondAttribute="trailing" id="i7Q-Ea-tkJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4mQ-Ti-wWY" secondAttribute="bottom" id="mXT-9o-g5L"/>
+                            <constraint firstItem="4mQ-Ti-wWY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oZB-Kg-ZOW"/>
+                            <constraint firstItem="4mQ-Ti-wWY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yPa-Tx-edY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4mQ-Ti-wWY" secondAttribute="trailing" id="z3g-r1-Eif"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KO5-tt-7IO"/>
+                                <exclude reference="i7Q-Ea-tkJ"/>
+                                <exclude reference="oZB-Kg-ZOW"/>
+                                <exclude reference="yPa-Tx-edY"/>
+                                <exclude reference="z3g-r1-Eif"/>
+                                <exclude reference="Sfj-DQ-IUA"/>
+                                <exclude reference="mXT-9o-g5L"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="4mQ-Ti-wWY" id="9ja-9n-dFX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="304"/>
+        </scene>
+    </scenes>
+</document>
