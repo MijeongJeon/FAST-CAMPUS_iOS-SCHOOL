@@ -79,5 +79,5 @@ Day43_Network
 - NSURLSecssion 클래스를 이용한 session 객체 생성 및 구글 이미지 불러오기 실습
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day43_160623(NSURLSeccion).png?" width="600px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day43_160623(NSURLSeccion).png?" width="400px" />
 <br>
