@@ -12,7 +12,7 @@
 @interface MainViewController ()
 <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (strong, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) UITableView *tableView;
 #pragma mark - User Info
 @property (strong, nonatomic) NSString *userID;
 
@@ -61,7 +61,8 @@
 
 #pragma mark - TableView
 - (void)createTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    self.tableView = tableView;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
