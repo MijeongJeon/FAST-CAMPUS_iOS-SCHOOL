@@ -19,7 +19,7 @@ Day42_CoreData
 
 ####**코어데이터 동작 순서**
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day42_160622(CoreData)3.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day42_160622(CoreData)3.png?" width="600px" />
 <br>
 - Managed Object Model : modle object를 표현하는 스키마 역할(entity, attribute, relation 포함)
 - Managed Object Context : 실제 데이터를 읽고 쓰는 담당. 코디네이터와 저장소를 관리함
@@ -39,7 +39,7 @@ Day42_CoreData
 - Coredata 클래스 생성 및 데이터 저장 실습
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day42_160622(CoreData)1.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day42_160622(CoreData)1.png?" width="600px" />
 <br>
 <br>
 <img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day42_160622(CoreData)2.png?" width="400px" />

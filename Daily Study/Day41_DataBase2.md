@@ -37,5 +37,5 @@ Day41_DataBase2
 - Mongo DB를 이용한 장바구니 항목 확장
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day41_160621(Database)1.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day41_160621(Database)1.png?" width="600px" />
 <br>

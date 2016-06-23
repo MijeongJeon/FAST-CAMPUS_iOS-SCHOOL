@@ -39,10 +39,10 @@ Day40_DataBase1
 
 
 <br>
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)1.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)1.png?" width="600px" />
 <br>
 
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)2.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)2.png?" width="600px" />
 <br>
 
-<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)3.png?" width="400px" />
+<img src="https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily Study/images/Day40_160620(Database)3.png?" width="600px" />
