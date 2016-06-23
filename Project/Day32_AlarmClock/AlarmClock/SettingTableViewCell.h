@@ -19,13 +19,13 @@
                                             
 @interface SettingTableViewCell : UITableViewCell
 
-@property (nonatomic, weak) id <SettingTableViewCellDelegate> delegate;
+@property (weak, nonatomic) id <SettingTableViewCellDelegate> delegate;
 
-@property (nonatomic, strong) UISwitch *switchOnOff;
-@property (nonatomic, strong) UILabel *timeLabel;
-@property (nonatomic, strong) UILabel *timeZoneLabel;
-@property (nonatomic, strong) UILabel *detailLabel1;
-@property (nonatomic, strong) UILabel *detailLabel2;
+@property (weak, nonatomic) UISwitch *switchOnOff;
+@property (weak, nonatomic) UILabel *timeLabel;
+@property (weak, nonatomic) UILabel *timeZoneLabel;
+@property (weak, nonatomic) UILabel *detailLabel1;
+@property (weak, nonatomic) UILabel *detailLabel2;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier withRow:(NSInteger)row;
 

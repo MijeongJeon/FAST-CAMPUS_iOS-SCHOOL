@@ -9,14 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface DataCenter : NSObject
-@property (nonatomic, strong) NSArray *settingTime;
-@property (nonatomic, strong) NSArray *detailSettingLabel1;
-@property (nonatomic, strong) NSArray *detailSettingLabel2;
-@property (nonatomic, strong) NSArray *settingTimeZone;
+@property (strong, nonatomic) NSArray *settingTime;
+@property (strong, nonatomic) NSArray *detailSettingLabel1;
+@property (strong, nonatomic) NSArray *detailSettingLabel2;
+@property (strong, nonatomic) NSArray *settingTimeZone;
+
++ (instancetype)defaultData;
 
 - (NSDictionary *)dataForRow:(NSInteger)index;
-+ (instancetype)defaultData;
 - (NSArray *)alramList;
+
 - (void)insertNewDataForRow:(NSDictionary *)newDic;
 - (void)removeDataAtIndex:(NSInteger)row;
 

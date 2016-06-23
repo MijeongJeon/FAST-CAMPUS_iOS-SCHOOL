@@ -13,7 +13,7 @@
 
 @interface ViewController ()
 <UITableViewDelegate, UITableViewDataSource, SettingTableViewCellDelegate>
-@property (nonatomic, strong) UITableView *tableView;
+@property (weak, nonatomic) UITableView *tableView;
 
 @end
 
@@ -24,10 +24,12 @@
 
     // Do any additional setup after loading the view, typically from a nib.
     // 테이블 뷰 객체
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
-    self.tableView.delegate = self; // 테이블 뷰 델리게이트 호출
-    self.tableView.dataSource = self; // 테이블 뷰 데이터 소스 호출
-    [self.view addSubview:self.tableView];// 테이블 뷰 화면에 생성
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
+    tableView.delegate = self; // 테이블 뷰 델리게이트 호출
+    tableView.dataSource = self; // 테이블 뷰 데이터 소스 호출
+    [self.view addSubview:tableView];// 테이블 뷰 화면에 생성
+    self.tableView = tableView;
+
     [self creatNavigationBar]; // 네이게이션 바 생성
 //    NSLog(@"%d",[[DataCenter defaultData] isSwitchON:self.tableView.indexPathForSelectedRow.row]);
 }
