@@ -10,6 +10,7 @@
 
 @interface SecondViewController : UIViewController
 
-@property (weak, nonatomic) UIImage *image;
+@property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) NSURL *imageURL;
 
 @end

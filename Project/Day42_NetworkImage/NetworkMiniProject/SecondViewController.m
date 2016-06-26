@@ -17,10 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor blackColor]];
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:imageView];
-    [imageView setImage:self.image];
     [imageView setContentMode:UIViewContentModeScaleAspectFit];
+    
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:self.imageURL
+completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    if (data) {
+        UIImage *image = [UIImage imageWithData:data];
+        if (image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.image = image;
+            });
+        }
+    }
+
+}];
+    [task resume];
+    [self.view addSubview:imageView];
+    
+    [imageView setImage:self.image];
     
     // Do any additional setup after loading the view.
 }

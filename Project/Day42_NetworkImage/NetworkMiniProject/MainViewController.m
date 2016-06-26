@@ -8,18 +8,18 @@
 
 #import "MainViewController.h"
 #import "SecondViewController.h"
+#import "RequestObject.h"
 
 @interface MainViewController ()
 <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) UITableView *tableView;
-#pragma mark - User Info
-@property (strong, nonatomic) NSString *userID;
 
-#pragma mark - Table Cell Data
-@property (strong, nonatomic) NSMutableArray *imageArray;
-@property (strong, nonatomic) NSMutableArray *imageNameArray;
+@property (strong, nonatomic) NSArray *imageList;
+@property (copy, nonatomic) UIImage *pickeredImage;
+@property (copy, nonatomic) NSString *pickeredImageName;
 
+@property (strong, nonatomic) RequestObject *requestObject;
 
 @end
 
@@ -30,8 +30,19 @@
     [self createTableView];
     [self layoutNavigation];
     
-    self.imageArray = [[NSMutableArray alloc] initWithCapacity:1];
-    self.imageNameArray = [[NSMutableArray alloc] initWithCapacity:1];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(refreshTableView)
+                                                 name:ImageListUpdatedNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self.requestObject
+                                             selector:@selector(requestImageList)
+                                                 name:ImageUpLoadDidSuccessNotification
+                                               object:nil];
+    
+    self.imageList = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    self.requestObject = [RequestObject sharedInstance];
 }
 
 #pragma mark - Navigation View
@@ -55,7 +66,7 @@
 
 // 오른쪽 리프레쉬 버튼 누르면 테이블 뷰 데이터 리로드
 - (void)refreshButton:(UIBarButtonItem *)sender {
-    [self.tableView reloadData];
+    [self refreshTableView];
 }
 
 
@@ -74,7 +85,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.imageArray.count;
+    return self.imageList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,18 +94,49 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
+    // 딕셔너리 가져옴
+    NSDictionary *imageInfo = self.imageList[indexPath.row];
+    
+    // 딕셔너리의 그림 이름 셀에 설정
+    NSString *imageTitle = imageInfo[JSONKeyImageTitle];
+    cell.textLabel.text = imageTitle;
+    
+    // 딕셔너리의 그림을 셀에 설정
+    NSString *thumbnailURLString = imageInfo[JSONKeyThumbnailURL];
+    NSURL *thumbnailURL = [NSURL URLWithString:thumbnailURLString];
+    
+    cell.imageView.image = [UIImage imageNamed:@"placeholder"];
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+// 이미지를 메인스레드에서 다운로드 받으면 다운로드 작업이 끝날때까지 다른 작업을 할 수 없어서 아래코드를 씀
+//    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:thumbnailURL]];
+    
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:thumbnailURL
+completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    
+    if (data) {
+        UIImage *image = [UIImage imageWithData:data];
+        if (image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 인덱스 꼬이지 말라고 해당 셀을 불러와서 이미지를 넣어줌
+                UITableViewCell *cellForUpdate = [tableView cellForRowAtIndexPath:indexPath];
+                cellForUpdate.imageView.image = image;
+            });
+        }
+    }
+    }];
+    
+    [task resume];
+    
     [cell.textLabel setFont:[UIFont systemFontOfSize:17]];
     [cell.textLabel setTextColor:[UIColor blackColor]];
-    
-    [cell.textLabel setText:[self.imageNameArray objectAtIndex:indexPath.row]];
-    [cell.imageView setImage:[self.imageArray objectAtIndex:indexPath.row]];
     
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 70;
+//}
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
@@ -103,7 +145,13 @@
 // 셀이 선택되었을때 상세 화면으로 넘어감
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SecondViewController *secondVC = [[SecondViewController alloc] init];
-    secondVC.image = self.imageArray[indexPath.row];
+    
+    NSString *imageURLString = self.imageList[indexPath.row][JSONKeyImageURL];
+    NSLog(@"%@",self.imageList[indexPath.row][JSONKeyImageURL]);
+    NSURL *imageURL = [NSURL URLWithString:imageURLString];
+
+    secondVC.imageURL = imageURL;
+                                    
     [self.navigationController pushViewController:secondVC animated:YES];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -112,15 +160,18 @@
 #pragma mark - First Alert
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
-    if (self.userID == nil) {
+    if (self.requestObject.userID == nil) {
         // alert 객체 생성
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Login" message:@"Insert User ID" preferredStyle:UIAlertControllerStyleAlert];
         
         // alert 액션 생성 및 행동 지정
         UIAlertAction *login = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             UITextField *textField = alert.textFields.firstObject;
-            self.userID = textField.text;
-            NSLog(@"user id:%@",self.userID);
+            self.requestObject.userID = textField.text;
+            NSLog(@"user id:%@",self.requestObject.userID);
+            
+            [self.requestObject requestImageList];
+            
         }];
         
         [alert addAction:login];
@@ -146,10 +197,7 @@
 // 이미지가 선택되었을때
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    UIImage *pickeredImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    // 선택된 사진을 어레이에 추가함
-    [self.imageArray addObject:pickeredImage];
+    self.pickeredImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     // 선택 후 피커 뷰 내려줌
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -165,8 +213,10 @@
                                                        handler:^(UIAlertAction * _Nonnull action) {
                                                            UITextField *textField = alert.textFields.firstObject;
                                                            NSLog(@"image name:%@",textField.text);
-                                                           [self.imageNameArray addObject:textField.text];
-                                                           [self.tableView reloadData];
+                                                           self.pickeredImageName = textField.text;
+                                                           
+                                                           [self.requestObject uploadImage:self.pickeredImage title:self.pickeredImageName];
+                                                           
                                                        }];
     
     [alert addAction:insertName];
@@ -178,7 +228,13 @@
     }];
 }
 
-
+- (void)refreshTableView {
+    self.imageList = self.requestObject.imageInfoJSONArray;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        [self.tableView reloadData];
+    });
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

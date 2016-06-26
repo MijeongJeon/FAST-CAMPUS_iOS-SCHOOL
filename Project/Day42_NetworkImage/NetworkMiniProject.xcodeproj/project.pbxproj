@@ -13,6 +13,8 @@
 		E905AF741D1A5E1600977DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E905AF721D1A5E1600977DF8 /* LaunchScreen.storyboard */; };
 		E905AF7D1D1A5F5700977DF8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AF7C1D1A5F5700977DF8 /* MainViewController.m */; };
 		E905AF801D1A654000977DF8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AF7F1D1A654000977DF8 /* SecondViewController.m */; };
+		E905AFA81D1CC6A600977DF8 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AFA71D1CC6A600977DF8 /* RequestObject.m */; };
+		E905AFAA1D1D06D500977DF8 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E905AFA91D1D06D500977DF8 /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,9 @@
 		E905AF7C1D1A5F5700977DF8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E905AF7E1D1A654000977DF8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E905AF7F1D1A654000977DF8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E905AFA61D1CC6A600977DF8 /* RequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestObject.h; sourceTree = "<group>"; };
+		E905AFA71D1CC6A600977DF8 /* RequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestObject.m; sourceTree = "<group>"; };
+		E905AFA91D1D06D500977DF8 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +68,11 @@
 				E905AF681D1A5E1600977DF8 /* AppDelegate.m */,
 				E905AF7B1D1A5F5700977DF8 /* MainViewController.h */,
 				E905AF7C1D1A5F5700977DF8 /* MainViewController.m */,
+				E905AFA61D1CC6A600977DF8 /* RequestObject.h */,
+				E905AFA71D1CC6A600977DF8 /* RequestObject.m */,
 				E905AF7E1D1A654000977DF8 /* SecondViewController.h */,
 				E905AF7F1D1A654000977DF8 /* SecondViewController.m */,
+				E905AFA91D1D06D500977DF8 /* placeholder.png */,
 				E905AF701D1A5E1600977DF8 /* Assets.xcassets */,
 				E905AF721D1A5E1600977DF8 /* LaunchScreen.storyboard */,
 				E905AF751D1A5E1600977DF8 /* Info.plist */,
@@ -140,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E905AF741D1A5E1600977DF8 /* LaunchScreen.storyboard in Resources */,
+				E905AFAA1D1D06D500977DF8 /* placeholder.png in Resources */,
 				E905AF711D1A5E1600977DF8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +163,7 @@
 				E905AF801D1A654000977DF8 /* SecondViewController.m in Sources */,
 				E905AF691D1A5E1600977DF8 /* AppDelegate.m in Sources */,
 				E905AF661D1A5E1600977DF8 /* main.m in Sources */,
+				E905AFA81D1CC6A600977DF8 /* RequestObject.m in Sources */,
 				E905AF7D1D1A5F5700977DF8 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
