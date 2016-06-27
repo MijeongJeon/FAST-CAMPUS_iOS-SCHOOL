@@ -80,6 +80,8 @@ FAST-CAMPUS_iOS
 - [Day41. Databese2_적절한 데이터베이스 선택하기](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day41_DataBase2.md)
 - [Day42. CoreData, Mini Project 시작](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day42_CoreData.md)
 - [Day43. Network, iOS Network](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day43_Network.md)
+- [Day45. Image Upload/download]
+- [Day46.](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day44_ImageUpload.md) Software Engineering_Agile/UserStory
 
 <br>
 >   **Data Structure and Algorithm(자료구조/알고리즘)**
