@@ -25,7 +25,7 @@ Day42_CoreData
 - Managed Object Context : 실제 데이터를 읽고 쓰는 담당. 코디네이터와 저장소를 관리함
 - Persistant store coordinator : 영구저장소의 파일 위치와 파일에 대한 입출력 담당/ 프로그래머는 managed object context를 통해 작업하므로 코디네이터를 직접 운용할 일은 거의 없음
 - Persistent store : 실질적인 데이터가 영구저장되는 공간
-
+<br>
 
 ####**CoreData Migration**
 - 데이터베이스 구조를 수정학 위한 기능(lightweight migration 기능)
