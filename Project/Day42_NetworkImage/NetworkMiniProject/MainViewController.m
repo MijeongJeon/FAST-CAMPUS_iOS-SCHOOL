@@ -151,6 +151,7 @@ completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response,
     NSURL *imageURL = [NSURL URLWithString:imageURLString];
 
     secondVC.imageURL = imageURL;
+    secondVC.imageName = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
                                     
     [self.navigationController pushViewController:secondVC animated:YES];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
