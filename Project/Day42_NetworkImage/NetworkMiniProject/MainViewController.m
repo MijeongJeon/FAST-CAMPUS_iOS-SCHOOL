@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "SecondViewController.h"
 #import "RequestObject.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainViewController ()
 <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -105,29 +106,46 @@
     NSString *thumbnailURLString = imageInfo[JSONKeyThumbnailURL];
     NSURL *thumbnailURL = [NSURL URLWithString:thumbnailURLString];
     
-    cell.imageView.image = [UIImage imageNamed:@"placeholder"];
+//    cell.imageView.image = [UIImage imageNamed:@"placeholder"];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+
+// 셀.이미지 뷰에 서버 이미지 가져오는 방법 1 ~ 3//
+// ***********************
+// 1. Apple_imageWithData : 이미지를 메인스레드에서 다운받는 방식으로, 다운로드가 종료될 때까지 다른 작업이 기다려야함
+// ***********************
     
-// 이미지를 메인스레드에서 다운로드 받으면 다운로드 작업이 끝날때까지 다른 작업을 할 수 없어서 아래코드를 씀
-//    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:thumbnailURL]];
+    //    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:thumbnailURL]];
     
-    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:thumbnailURL
-completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
     
-    if (data) {
-        UIImage *image = [UIImage imageWithData:data];
-        if (image) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // 인덱스 꼬이지 말라고 해당 셀을 불러와서 이미지를 넣어줌
-                UITableViewCell *cellForUpdate = [tableView cellForRowAtIndexPath:indexPath];
-                cellForUpdate.imageView.image = image;
-            });
-        }
-    }
-    }];
+// ***********************
+// 2. Apple_NSURLSession
+// ***********************
     
-    [task resume];
+    //    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:thumbnailURL
+    //completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    //    
+    //    if (data) {
+    //        UIImage *image = [UIImage imageWithData:data];
+    //        if (image) {
+    //            dispatch_async(dispatch_get_main_queue(), ^{
+    //                // 인덱스 꼬이지 말라고 해당 셀을 불러와서 이미지를 넣어줌
+    //                UITableViewCell *cellForUpdate = [tableView cellForRowAtIndexPath:indexPath];
+    //                cellForUpdate.imageView.image = image;
+    //            });
+    //        }
+    //    }
+    //    }];
+    //    
+    //    [task resume];
     
+// ***********************
+// 3. Pod_SDWebImage (URL에 있는 이미지를 imageView에 가져와준다!!)
+// ***********************
+    
+    [cell.imageView sd_setImageWithURL:thumbnailURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    
+    
+    // 셀 속성 조절
     [cell.textLabel setFont:[UIFont systemFontOfSize:17]];
     [cell.textLabel setTextColor:[UIColor blackColor]];
     

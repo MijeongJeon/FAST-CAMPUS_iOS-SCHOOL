@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface SecondViewController ()
 
@@ -18,27 +19,46 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor blackColor]];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [imageView setContentMode:UIViewContentModeScaleAspectFit];
-    
-    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:self.imageURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-    
-    if (data) {
-        UIImage *image = [UIImage imageWithData:data];
-        if (image) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [imageView setImage:image];
-            });
-        }
-    }
-
-}];
-    [task resume];
-    [self.view addSubview:imageView];
-    
-    [self.navigationItem setTitle:self.imageName];
-    
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+// ***********************
+// Pod_SDWebImage (URL에 있는 이미지를 imageView에 가져와준다!!)
+// ***********************
+
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [imageView sd_setImageWithURL:self.imageURL placeholderImage:nil];
+    
+    [self.view addSubview:imageView];
+    [imageView setContentMode:UIViewContentModeScaleAspectFit];
+
+    [self.navigationItem setTitle:self.imageName];
+ 
+// ***********************
+// Apple_NSURLSession
+// ***********************
+
+    //    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    //    [imageView setContentMode:UIViewContentModeScaleAspectFit];
+    //
+    //    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:self.imageURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    //
+    //    if (data) {
+    //        UIImage *image = [UIImage imageWithData:data];
+    //        if (image) {
+    //            dispatch_async(dispatch_get_main_queue(), ^{
+    //                [imageView setImage:image];
+    //            });
+    //        }
+    //    }
+    //
+    //}];
+    //    [task resume];
+    //    [self.view addSubview:imageView];
+    //    
+    //    [self.navigationItem setTitle:self.imageName];
+
 }
 
 - (void)didReceiveMemoryWarning {

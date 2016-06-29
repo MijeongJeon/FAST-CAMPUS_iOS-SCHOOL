@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591C6B3031BCEF06132D8267 /* libPods-NetworkMiniProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F3AC4E9FE3A2D6A2036DE0 /* libPods-NetworkMiniProject.a */; };
 		E905AF661D1A5E1600977DF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AF651D1A5E1600977DF8 /* main.m */; };
 		E905AF691D1A5E1600977DF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AF681D1A5E1600977DF8 /* AppDelegate.m */; };
 		E905AF711D1A5E1600977DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E905AF701D1A5E1600977DF8 /* Assets.xcassets */; };
@@ -14,10 +15,13 @@
 		E905AF7D1D1A5F5700977DF8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AF7C1D1A5F5700977DF8 /* MainViewController.m */; };
 		E905AF801D1A654000977DF8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AF7F1D1A654000977DF8 /* SecondViewController.m */; };
 		E905AFA81D1CC6A600977DF8 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E905AFA71D1CC6A600977DF8 /* RequestObject.m */; };
-		E905AFAA1D1D06D500977DF8 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E905AFA91D1D06D500977DF8 /* placeholder.png */; };
+		E996313A1D22218B00E5D225 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E99631391D22218B00E5D225 /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151CE98193C209A5C304340E /* Pods-NetworkMiniProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkMiniProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkMiniProject/Pods-NetworkMiniProject.debug.xcconfig"; sourceTree = "<group>"; };
+		24119D1EE24B00F56FD9E92E /* Pods-NetworkMiniProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkMiniProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkMiniProject/Pods-NetworkMiniProject.release.xcconfig"; sourceTree = "<group>"; };
+		98F3AC4E9FE3A2D6A2036DE0 /* libPods-NetworkMiniProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkMiniProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E905AF611D1A5E1600977DF8 /* NetworkMiniProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkMiniProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E905AF651D1A5E1600977DF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E905AF671D1A5E1600977DF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,7 +35,7 @@
 		E905AF7F1D1A654000977DF8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E905AFA61D1CC6A600977DF8 /* RequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestObject.h; sourceTree = "<group>"; };
 		E905AFA71D1CC6A600977DF8 /* RequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestObject.m; sourceTree = "<group>"; };
-		E905AFA91D1D06D500977DF8 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		E99631391D22218B00E5D225 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591C6B3031BCEF06132D8267 /* libPods-NetworkMiniProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88D046A3757E29F8955737FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				151CE98193C209A5C304340E /* Pods-NetworkMiniProject.debug.xcconfig */,
+				24119D1EE24B00F56FD9E92E /* Pods-NetworkMiniProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E905AF581D1A5E1600977DF8 = {
 			isa = PBXGroup;
 			children = (
 				E905AF631D1A5E1600977DF8 /* NetworkMiniProject */,
 				E905AF621D1A5E1600977DF8 /* Products */,
+				88D046A3757E29F8955737FA /* Pods */,
+				F9129BBADECB32E8137E649C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,7 +88,7 @@
 				E905AF7F1D1A654000977DF8 /* SecondViewController.m */,
 				E905AFA61D1CC6A600977DF8 /* RequestObject.h */,
 				E905AFA71D1CC6A600977DF8 /* RequestObject.m */,
-				E905AFA91D1D06D500977DF8 /* placeholder.png */,
+				E99631391D22218B00E5D225 /* placeholder.png */,
 				E905AF701D1A5E1600977DF8 /* Assets.xcassets */,
 				E905AF721D1A5E1600977DF8 /* LaunchScreen.storyboard */,
 				E905AF751D1A5E1600977DF8 /* Info.plist */,
@@ -89,6 +105,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F9129BBADECB32E8137E649C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98F3AC4E9FE3A2D6A2036DE0 /* libPods-NetworkMiniProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E905AF781D1A5E1600977DF8 /* Build configuration list for PBXNativeTarget "NetworkMiniProject" */;
 			buildPhases = (
+				454B065BF8B6A4EA18DE5827 /* [CP] Check Pods Manifest.lock */,
 				E905AF5D1D1A5E1600977DF8 /* Sources */,
 				E905AF5E1D1A5E1600977DF8 /* Frameworks */,
 				E905AF5F1D1A5E1600977DF8 /* Resources */,
+				05707F6EC8B4589BF4D06E5B /* [CP] Embed Pods Frameworks */,
+				3FE943BFD8A3F44C7AD3A402 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,12 +175,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				E905AF741D1A5E1600977DF8 /* LaunchScreen.storyboard in Resources */,
-				E905AFAA1D1D06D500977DF8 /* placeholder.png in Resources */,
+				E996313A1D22218B00E5D225 /* placeholder.png in Resources */,
 				E905AF711D1A5E1600977DF8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05707F6EC8B4589BF4D06E5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkMiniProject/Pods-NetworkMiniProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FE943BFD8A3F44C7AD3A402 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkMiniProject/Pods-NetworkMiniProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		454B065BF8B6A4EA18DE5827 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E905AF5D1D1A5E1600977DF8 /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		E905AF791D1A5E1600977DF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 151CE98193C209A5C304340E /* Pods-NetworkMiniProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetworkMiniProject/Info.plist;
@@ -279,6 +355,7 @@
 		};
 		E905AF7A1D1A5E1600977DF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24119D1EE24B00F56FD9E92E /* Pods-NetworkMiniProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NetworkMiniProject/Info.plist;
