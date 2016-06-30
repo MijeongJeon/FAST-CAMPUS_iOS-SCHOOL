@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  NetworkMiniProject
+//
+//  Created by Mijeong Jeon on 6/30/16.
+//  Copyright © 2016 Mijeong Jeon. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+
+#define USE_LOG_LEVEL_1
+#define USE_LOG_LEVEL_2
+
+
+#ifdef USE_LOG_LEVEL_1
+
+#define LOG_LEV_ONE( s, ... ) NSLog(@"%s(%d) %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#else
+
+#define LOG_LEV_ONE( s, ... )
+
+#endif
+
+
+#ifdef USE_LOG_LEVEL_2
+
+#define LOG_LEV_TWO( s, ... ) NSLog(@"%s(%d) %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#else
+
+#define LOG_LEV_TWO( s, ... )
+
+#endif
+
+#define NSLog( s, ... ) NSLog(@"%s(%d) %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+

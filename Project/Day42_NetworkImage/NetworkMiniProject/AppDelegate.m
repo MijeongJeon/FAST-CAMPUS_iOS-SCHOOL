@@ -18,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // pch 테스트
+    NSLog(@"언제나 보이는 로그");
+    
+    LOG_LEV_ONE(@"로그 레벨 1");
+    LOG_LEV_TWO(@"로그 레벨 2");
+    
+    // 디바이스 버전 정보
+    NSString *version = [[UIDevice currentDevice] systemVersion];
+    NSString *model = [[UIDevice currentDevice] model];
+    
+    NSLog(@"%@", version);
+    NSLog(@"%@", model);
+    
+    // 어플 버전 정보
+    NSURL *infoURL = [[NSBundle mainBundle] URLForResource:@"Info" withExtension:@"plist"];
+    NSDictionary *infoDic = [NSDictionary dictionaryWithContentsOfURL:infoURL];
+    
+    NSLog(@"%@", infoDic);
+    NSLog(@"%@", infoDic[@"CFBundleShortVersionString"]);
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
     MainViewController *mainViewController = [[MainViewController alloc] init];

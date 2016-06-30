@@ -23,6 +23,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
 // ***********************
 // Pod_SDWebImage (URL에 있는 이미지를 imageView에 가져와준다!!)
 // ***********************
