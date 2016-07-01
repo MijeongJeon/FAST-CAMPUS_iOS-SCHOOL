@@ -17,8 +17,6 @@
 @property (weak, nonatomic) UITableView *tableView;
 
 @property (strong, nonatomic) NSArray *imageList;
-@property (copy, nonatomic) UIImage *pickeredImage;
-@property (copy, nonatomic) NSString *pickeredImageName;
 
 @property (strong, nonatomic) RequestObject *requestObject;
 
@@ -206,17 +204,30 @@
 #pragma mark - ImagePickerController
 // 이미지 피커뷰 생성
 - (void)showImagePicherController {
-    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
-    [pickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-    pickerController.delegate = self;
     
-    [self presentViewController:pickerController animated:YES completion:nil];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+        pickerController.delegate = self;
+        
+        [pickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        
+        [self presentViewController:pickerController animated:YES completion:nil];
+ 
+    }
+
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil]; // 모달을 내려준다.
 }
 
 // 이미지가 선택되었을때
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-    self.pickeredImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+//    UIImage *pickedImage = [[UIImage alloc] init];
+//    pickedImage = nil;
+    
+    UIImage *pickedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     // 선택 후 피커 뷰 내려줌
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -230,11 +241,10 @@
     UIAlertAction *insertName = [UIAlertAction actionWithTitle:@"OK"
                                                          style:UIAlertActionStyleDefault
                                                        handler:^(UIAlertAction * _Nonnull action) {
-                                                           UITextField *textField = alert.textFields.firstObject;
-                                                           NSLog(@"image name:%@",textField.text);
-                                                           self.pickeredImageName = textField.text;
+                                                           UITextField *title = alert.textFields.firstObject;
+                                                           NSLog(@"image name:%@",title.text);
                                                            
-                                                           [self.requestObject uploadImage:self.pickeredImage title:self.pickeredImageName];
+                                                           [self.requestObject uploadImage:pickedImage title:title.text];
                                                            
                                                        }];
     
