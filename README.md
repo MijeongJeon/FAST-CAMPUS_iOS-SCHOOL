@@ -38,32 +38,32 @@ FAST-CAMPUS_iOS
 
 <br>
 >   **Unit2. Objective-C**
-- Day08. Xcode 사용법, 변수, 함수
-- Day09. C언어_조건문, 반복문
-- Day10. C언어_함수를 이용한 실습
-- Day11. Objective-C, 변수, 클래스, 객체
-- Day12. 클래스/메소드 선언방식, 상속
+- [Day08. Xcode 사용법, 변수, 함수](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day08_Xcode%20사용법.md)
+- [Day09. C언어_조건문, 반복문](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day09_조건문%2C%20반복문.md)
+- [Day10. C언어_함수를 이용한 실습](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day10_C%20언어%20실습.md)
+- [Day11. Objective-C, 변수, 클래스, 객체](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day11_Objective-C%20객체지향.md)
+- [Day12. 클래스/메소드 선언방식, 상속](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day12_Objective-C%20클래스와%20메소드.md)
 - Day13. Review + Objective-C 용어 정리
 - Day14. Review + Objective-C 용어 정리 + 클래스 실습
 - Day15. 실습_자판기 만들기 
 
 <br>
 >   **Unit3. iOS Framework**
-- Day16. Cocoa Touch Framework_Storyboard 활용
-- Day17. NSObject Life Cycle, Auto Layout 활용
-- Day18. 자료구조/알고리즘-
-- Day19. 열거, 옵션, ARC, Property
+- [Day16. Cocoa Touch Framework_Storyboard 활용](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day16_UIView.md)
+- [Day17. NSObject Life Cycle, Auto Layout 활용](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day17_Auto%20Layout.md)
+- [Day18. 자료구조/알고리즘](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day18_Algorithm.md)
+- [Day19. 열거, 옵션, ARC, Property](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day19_ARC%2C%20property.md)
 - Day20. Github desktop, Autolayout 실습, property
-- Day21. 자료구조/알고리즘
+- [Day21. 자료구조/알고리즘](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day21_UIView%2C%20UILabel.md)
 - Day22. UI Component1_UIView, UILabel, UIImageView
 - Day23. 자료구조/알고리즘
-- Day24. UI Component2_UIControl, UIButton/ protocol, delegate
-- Day25. UI Component3_Animation, Block, UITextField
+- [Day24. UI Component2_UIControl, UIButton/ protocol, delegate](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day24_UIComponent%2C%20Protocol.md)
+- [Day25. UI Component3_Animation, Block, UITextField](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day25_Asset%2C%20Block.md)
 
 <br>
 >   **Unit4. ViewControl and DB Connect**
-- Day26. 자료구조/알고리즘
-- Day27. UIViewController and NavigationController
+- [Day26. 자료구조/알고리즘](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day26_Graph.md)
+- [Day27. UIViewController and NavigationController](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day27_UIViwController%2C%20Navi.md)
 - Day28. 자료구조/알고리즘
 - Day29. Collection, Singleton, Data(Plist)
 - Day30. Review(Delegate, Block)
@@ -80,12 +80,12 @@ FAST-CAMPUS_iOS
 - [Day41. Databese2_적절한 데이터베이스 선택하기](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day41_DataBase2.md)
 - [Day42. CoreData, Mini Project 시작](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day42_CoreData.md)
 - [Day43. Network, iOS Network](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day43_Network.md)
-- [Day44.](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day44_ImageUpload.md) Image Upload/download
-- [Day45.](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day45_SoftwareEngineering.md) Softwere Engineering1_Agile/UserStory
-- [Day46.](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day46_CocoaPods.md) Cocoa Pods_AFNetworking, SBJson, SDWebImage
-- [Day47.](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day47_SoftwereEngineering.md) SoftwereEngineering2_Product Backlog, Sprint Backlog
-- [Day48.] X-Code Target, Built Setting, Info.plist
-- [Day49.] (https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day49_SoftwereEngineering3.md) SoftwereEngineering3_소프트웨어 품질 관리, 소프트웨어 공학 원리
+- [Day44. Image Upload/download](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day44_ImageUpload.md) 
+- [Day45. Softwere Engineering1_Agile/UserStory](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day45_SoftwareEngineering.md) 
+- [Day46. Cocoa Pods_AFNetworking, SBJson, SDWebImage](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day46_CocoaPods.md) 
+- [Day47. SoftwereEngineering2_Product Backlog, Sprint Backlog](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day47_SoftwereEngineering.md) 
+- [Day48. X-Code Target, Built Setting, Info.plist] 
+- [Day49. SoftwereEngineering3_소프트웨어 품질 관리, 소프트웨어 공학 원리] (https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day49_SoftwereEngineering3.md) 
 
 <br>
 >   **Data Structure and Algorithm(자료구조/알고리즘)**
