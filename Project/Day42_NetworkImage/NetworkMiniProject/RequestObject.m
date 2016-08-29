@@ -162,7 +162,7 @@
         
         [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 0.1)
                                     name:@"image_data"
-                                fileName:@"image.jpeg"
+                                fileName:@"i54545454.jpeg"
                                 mimeType:@"image/jpeg"];
         
     } error:nil];

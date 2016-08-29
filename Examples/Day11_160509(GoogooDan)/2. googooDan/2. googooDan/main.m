@@ -21,7 +21,7 @@ void gooGooDan(NSArray *danSoo) {
 
 int main(int argc, const char * argv[]) {
     
-    NSArray *danSoo = @[@2, @3, @7];
+    NSArray *danSoo = @[@1, @13, @49998];
     gooGooDan(danSoo);
     
     return 0;

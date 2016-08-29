@@ -100,7 +100,7 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     NSLog(@"latitude : %f, longitude : %f",asset.location.coordinate.latitude, asset.location.coordinate.longitude);
     NSLog(@"Date : %@",asset.creationDate); // 그리니치 평균시(우리나라는 +9시간해야함)
-    NSLog(@"TimeStamp[ : %f", asset.creationDate.timeIntervalSince1970);
+    NSLog(@"TimeStamp[ ㄹㅎ호ㅗㅓㅏ : %f", asset.creationDate.timeIntervalSince1970);
 
 
 

@@ -24,7 +24,7 @@
 
 // 섹션 수 설정
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 // 로우 수 설정
@@ -57,8 +57,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     NSString *title = [NSString stringWithFormat:@"section : %ld  row : %ld", indexPath.section, (long)indexPath.row];
-    cell.textLabel.text = title;
+//    cell.textLabel.text = title;
+    if (indexPath.row%2 == 0) {
+        cell.backgroundColor = [UIColor redColor];
+    } else {
+        cell.backgroundColor = [UIColor blueColor];
+    }
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 120;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -348,12 +348,15 @@
 			baseConfigurationReference = 151CE98193C209A5C304340E /* Pods-NetworkMiniProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/MijeongJeon/Desktop/FCS_Git_Daily/Project/Day42_NetworkImage/NetworkMiniProject/PrefixHeader.pch;
 				INFOPLIST_FILE = NetworkMiniProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.NetworkMiniProject;
 				PRODUCT_NAME = NetworkMiniProject;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -362,12 +365,15 @@
 			baseConfigurationReference = 24119D1EE24B00F56FD9E92E /* Pods-NetworkMiniProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/MijeongJeon/Desktop/FCS_Git_Daily/Project/Day42_NetworkImage/NetworkMiniProject/PrefixHeader.pch;
 				INFOPLIST_FILE = NetworkMiniProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.NetworkMiniProject;
 				PRODUCT_NAME = NetworkMiniProject;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
