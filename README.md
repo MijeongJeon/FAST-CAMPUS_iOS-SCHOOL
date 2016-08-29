@@ -84,7 +84,7 @@ FAST-CAMPUS_iOS
 - [Day45. Softwere Engineering1_Agile/UserStory](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day45_SoftwareEngineering.md) 
 - [Day46. Cocoa Pods_AFNetworking, SBJson, SDWebImage](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day46_CocoaPods.md) 
 - [Day47. SoftwereEngineering2_Product Backlog, Sprint Backlog](https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day47_SoftwereEngineering.md) 
-- [Day48. X-Code Target, Built Setting, Info.plist] 
+- Day48. X-Code Target, Built Setting, Info.plist
 - [Day49. SoftwereEngineering3_소프트웨어 품질 관리, 소프트웨어 공학 원리] (https://github.com/MijeongJeon/FAST-CAMPUS_iOS-SCHOOL/blob/master/Daily%20Study/Day49_SoftwereEngineering3.md) 
 
 <br>
