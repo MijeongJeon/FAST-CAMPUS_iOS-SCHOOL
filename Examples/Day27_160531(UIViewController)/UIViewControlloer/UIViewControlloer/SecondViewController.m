@@ -22,8 +22,19 @@
     [self createToolBar];
     [self createNavigationBar ];
     [self createTitle];
+    NSLog(@"viewdidload_second");
+
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"viewwillapper_second");
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+      NSLog(@"viewdidappear_second");
+
+}
 - (void)createTitle {
     
     self.navigationItem.title = @"title";

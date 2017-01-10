@@ -12,7 +12,7 @@
 @property (nonatomic) NSInteger count;
 @property (nonatomic, weak) IBOutlet UILabel *countLabel;
 
-@en
+@end
 
 @implementation ViewController
 

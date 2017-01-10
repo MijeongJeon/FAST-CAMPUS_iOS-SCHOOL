@@ -34,10 +34,10 @@
 
 // Section 당 row 수
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *animalArray = [[DataCenter defaultData] sectionTitles];
-    NSDictionary *animalDic = [[DataCenter defaultData].allAnimals objectForKey:animalArray[section]];
+    NSArray *animalKeyArray = [[DataCenter defaultData] sectionTitles];
+    NSArray *animalArray = [[DataCenter defaultData].allAnimals objectForKey:animalKeyArray[section]];
     
-    return animalDic.count;
+    return animalArray.count;
 }
 
 

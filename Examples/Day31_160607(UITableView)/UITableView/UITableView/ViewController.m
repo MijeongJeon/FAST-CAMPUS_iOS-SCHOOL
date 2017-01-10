@@ -29,7 +29,7 @@
 
 // 로우 수 설정
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 0;
 }
 
 // 헤더 및 푸터 이름 작성
@@ -49,24 +49,29 @@
 //    }
 //}
 
+
 // 셀 생성 및 재사용
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     NSString *title = [NSString stringWithFormat:@"section : %ld  row : %ld", indexPath.section, (long)indexPath.row];
-//    cell.textLabel.text = title;
-    if (indexPath.row%2 == 0) {
-        cell.backgroundColor = [UIColor redColor];
+    
+    if (indexPath.row == indexPath.section) {
+            UISwitch *swich = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+            cell.accessoryView = swich;
+            cell.textLabel.text = title;
+        
     } else {
-        cell.backgroundColor = [UIColor blueColor];
+        cell.textLabel.text = title;
     }
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 120;
+    return 40;
 }
 
 - (void)didReceiveMemoryWarning {

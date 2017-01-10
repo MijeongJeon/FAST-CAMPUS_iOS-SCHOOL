@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import <Photos/Photos.h>
+#import <CoreLocation/CLGeocoder.h>
+#import <CoreLocation/CLPlacemark.h>
+
 //#import <CoreLocation/CoreLocation.h>
 //#import <MobileCoreServices/MobileCoreServices.h>
 
@@ -102,6 +105,41 @@ didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     NSLog(@"Date : %@",asset.creationDate); // 그리니치 평균시(우리나라는 +9시간해야함)
     NSLog(@"TimeStamp[ ㄹㅎ호ㅗㅓㅏ : %f", asset.creationDate.timeIntervalSince1970);
 
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:asset.location completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        for (CLPlacemark * placemark in placemarks) {
+            //Obtains the country code, that is the same whatever language you are working with (US, ES, IT ...)
+            
+            NSString *countryCode = [placemark ISOcountryCode];
+            //Obtains a locale identifier. This will handle every language
+            NSString *identifier = [NSLocale localeIdentifierFromComponents: [NSDictionary dictionaryWithObject: countryCode forKey: NSLocaleCountryCode]];
+            //Obtains the country name from the locale BUT IN ENGLISH (you can set it as "en_UK" also)
+            NSString *country = [[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] displayNameForKey: NSLocaleIdentifier value:identifier];
+            NSLog(country);
+        }
+        
+        
+        
+        CLPlacemark *placemark = [placemarks firstObject];
+        
+        NSString *countryCode = placemarks.ISOcountryCode;
+        NSLog(countryCode);
+        
+        NSString *cityString = placemark.addressDictionary[@"Country"];
+        NSString *cityString2 = placemark.addressDictionary[@"SubLocality"];
+        
+        NSLog(@"%@", asset.localIdentifier);
+        NSLog(@"%@", cityString); // 당첨
+        NSLog(@"%@", cityString2);
+        NSLog(@"%@", placemark.addressDictionary[@"City"]); // 당첨
+        NSLog(@"%@", placemark.addressDictionary[@"AdministrativeArea"]);
+
+//        NSLog(@"%@", placemarks);
+        NSLog(@"%@", error);
+        // or equivalent
+        //            self.cityString = placemark.locality;
+    }];
 
 
 //    ///// ALAsset 옛날 버전////

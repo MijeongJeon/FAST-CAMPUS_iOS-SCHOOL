@@ -33,6 +33,21 @@
     
     NSArray *friendList = [NSArray arrayWithContentsOfFile:docuPath];
     return friendList;
+    
+//    let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+//    let nsUserDomainMask = NSSearchPathDomainMask.UserDomainMask
+//    if let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true) {
+//        if paths.count > 0 {
+//            if let dirPath = paths[0] as? String {
+//                let readPath = dirPath.stringByAppendingPathComponent("Image.png")
+//                let image = UIImage(named: readPath)
+//                let writePath = dirPath.stringByAppendingPathComponent("Image2.png")
+//                UIImagePNGRepresentation(image).writeToFile(writePath, atomically: true)
+//            }
+//        }
+//    }
+
+    
 }
 
 - (void)addFriendInfo:(NSString *)name phone:(NSString *)phone {
